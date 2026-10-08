@@ -24,18 +24,9 @@
       overflow-x: hidden;
     }
     
-    .container {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+    .container { max-width: 850px; margin: 0 auto; padding: 20px; }
     
-    /* هدر و لوگو */
-    .hero {
-      text-align: center;
-      padding: 60px 20px 40px;
-      position: relative;
-    }
+    .hero { text-align: center; padding: 60px 20px 40px; position: relative; }
     
     .hero::before {
       content: '';
@@ -82,7 +73,6 @@
       border: 1px solid rgba(91,192,222,0.3);
     }
     
-    /* دکمه‌های CTA */
     .cta-group {
       display: flex;
       gap: 15px;
@@ -127,17 +117,8 @@
       box-shadow: 0 8px 30px rgba(29,161,242,0.5);
     }
     
-    /* کارت قیمت‌ها */
-    .prices-section {
-      margin: 40px 0;
-    }
-    
-    .prices-section h2 {
-      text-align: center;
-      color: #5bc0de;
-      margin-bottom: 25px;
-      font-size: 1.5em;
-    }
+    .prices-section { margin: 40px 0; }
+    .prices-section h2 { text-align: center; color: #5bc0de; margin-bottom: 25px; font-size: 1.5em; }
     
     .prices-grid {
       display: grid;
@@ -161,38 +142,15 @@
       box-shadow: 0 10px 30px rgba(91,192,222,0.15);
     }
     
-    .price-card .coin-name {
-      font-size: 0.95em;
-      color: #8b9bb4;
-      margin-bottom: 8px;
-    }
-    
-    .price-card .coin-price {
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 5px;
-    }
-    
-    .price-card .coin-change {
-      font-size: 0.9em;
-      font-weight: bold;
-    }
+    .price-card .coin-name { font-size: 0.95em; color: #8b9bb4; margin-bottom: 8px; }
+    .price-card .coin-price { font-size: 1.4em; font-weight: bold; color: #fff; margin-bottom: 5px; }
+    .price-card .coin-change { font-size: 0.9em; font-weight: bold; }
     
     .up { color: #4ade80; }
     .down { color: #f87171; }
     
-    /* بخش ویژگی‌ها */
-    .features-section {
-      margin: 50px 0;
-    }
-    
-    .features-section h2 {
-      text-align: center;
-      color: #5bc0de;
-      margin-bottom: 30px;
-      font-size: 1.5em;
-    }
+    .features-section { margin: 50px 0; }
+    .features-section h2 { text-align: center; color: #5bc0de; margin-bottom: 30px; font-size: 1.5em; }
     
     .features-grid {
       display: grid;
@@ -213,24 +171,10 @@
       transform: translateY(-3px);
     }
     
-    .feature-icon {
-      font-size: 2em;
-      margin-bottom: 12px;
-      display: block;
-    }
+    .feature-icon { font-size: 2em; margin-bottom: 12px; display: block; }
+    .feature-card h3 { color: #5bc0de; margin-bottom: 10px; font-size: 1.1em; }
+    .feature-card p { color: #a0b3c8; font-size: 0.95em; }
     
-    .feature-card h3 {
-      color: #5bc0de;
-      margin-bottom: 10px;
-      font-size: 1.1em;
-    }
-    
-    .feature-card p {
-      color: #a0b3c8;
-      font-size: 0.95em;
-    }
-    
-    /* بخش درباره ما */
     .about-section {
       margin: 50px 0;
       background: rgba(23,33,43,0.6);
@@ -239,28 +183,100 @@
       border: 1px solid rgba(91,192,222,0.1);
     }
     
-    .about-section h2 {
+    .about-section h2 { color: #5bc0de; margin-bottom: 20px; font-size: 1.5em; }
+    .about-section p { color: #d1d9e0; margin-bottom: 15px; }
+    
+    /* بخش حساب‌های رسمی */
+    .official-section {
+      margin: 50px 0;
+      background: linear-gradient(135deg, rgba(23,33,43,0.9), rgba(26,31,58,0.9));
+      border: 2px solid rgba(91,192,222,0.3);
+      border-radius: 15px;
+      padding: 30px;
+    }
+    
+    .official-section h2 {
       color: #5bc0de;
       margin-bottom: 20px;
       font-size: 1.5em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
     
-    .about-section p {
-      color: #d1d9e0;
-      margin-bottom: 15px;
+    .official-list {
+      list-style: none;
+      margin-bottom: 25px;
     }
     
-    /* FAQ */
-    .faq-section {
-      margin: 50px 0;
+    .official-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(91,192,222,0.1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
     
-    .faq-section h2 {
-      text-align: center;
+    .official-list li:last-child { border-bottom: none; }
+    
+    .official-list .badge {
+      background: rgba(74,222,128,0.15);
+      color: #4ade80;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8em;
+      font-weight: bold;
+      border: 1px solid rgba(74,222,128,0.3);
+    }
+    
+    .official-list a {
       color: #5bc0de;
-      margin-bottom: 30px;
-      font-size: 1.5em;
+      text-decoration: none;
+      font-weight: bold;
+      direction: ltr;
     }
+    
+    .official-list a:hover { text-decoration: underline; }
+    
+    /* بخش هشدار */
+    .warning-section {
+      margin: 30px 0 50px;
+      background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(220,38,38,0.05));
+      border: 2px solid rgba(248,113,113,0.4);
+      border-radius: 15px;
+      padding: 30px;
+    }
+    
+    .warning-section h2 {
+      color: #f87171;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .warning-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .warning-section li {
+      padding: 10px 0;
+      color: #fecaca;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .warning-section li::before {
+      content: '⚠️';
+      flex-shrink: 0;
+    }
+    
+    .faq-section { margin: 50px 0; }
+    .faq-section h2 { text-align: center; color: #5bc0de; margin-bottom: 30px; font-size: 1.5em; }
     
     .faq-item {
       background: rgba(23,33,43,0.6);
@@ -271,9 +287,7 @@
       transition: all 0.3s ease;
     }
     
-    .faq-item:hover {
-      border-color: rgba(91,192,222,0.3);
-    }
+    .faq-item:hover { border-color: rgba(91,192,222,0.3); }
     
     .faq-question {
       padding: 18px 22px;
@@ -293,9 +307,7 @@
       transition: transform 0.3s ease;
     }
     
-    .faq-item.active .faq-question::after {
-      transform: rotate(45deg);
-    }
+    .faq-item.active .faq-question::after { transform: rotate(45deg); }
     
     .faq-answer {
       max-height: 0;
@@ -306,12 +318,8 @@
       font-size: 0.95em;
     }
     
-    .faq-item.active .faq-answer {
-      max-height: 300px;
-      padding: 0 22px 18px;
-    }
+    .faq-item.active .faq-answer { max-height: 300px; padding: 0 22px 18px; }
     
-    /* فوتر */
     footer {
       text-align: center;
       padding: 40px 20px 20px;
@@ -321,21 +329,10 @@
       margin-top: 50px;
     }
     
-    footer a {
-      color: #5bc0de;
-      text-decoration: none;
-    }
+    footer a { color: #5bc0de; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
     
-    footer a:hover {
-      text-decoration: underline;
-    }
-    
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
+    .social-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
     
     .social-links a {
       display: inline-flex;
@@ -356,7 +353,6 @@
       transform: translateY(-3px);
     }
     
-    /* واکنش‌گرا */
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.8em; }
       .hero .subtitle { font-size: 1em; }
@@ -365,17 +361,13 @@
       .btn { padding: 12px 22px; font-size: 0.95em; }
     }
     
-    /* انیمیشن ورود */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
     
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
@@ -460,8 +452,46 @@
       ViaChart یک کانال تخصصی برای تریدرهای فارسی‌زبان و انگلیسی‌زبان در بازار ارزهای دیجیتال است. ما با تمرکز بر اخبار لحظه‌ای، تحلیل تکنیکال و فاندامنتال، و ارائه سیگنال‌های حرفه‌ای فیوچرز و اسپات، به کاربران کمک می‌کنیم تا با مدیریت سرمایه و کنترل ریسک، تصمیم‌های هوشمندانه‌تری بگیرند.
     </p>
     <p>
-      هدف ما ایجاد یک جامعه شفاف و قابل اعتماد است که در آن رکورد سیگنال‌ها به‌صورت کامل نمایش داده می‌شود و هیچ وعده سود تضمینی داده نمی‌شود. چه تازه‌کار باشید و چه حرفه‌ای، ViaChart می‌تواند همراه شما در مسیر ترید باشد.
+      هدف ما ایجاد یک جامعه شفاف و قابل اعتماد است که در آن رکورد سیگنال‌ها به‌صورت کامل نمایش داده می‌شود و هیچ وعده سود تضمینی داده نمی‌شود.
     </p>
+  </section>
+
+  <!-- حساب‌های رسمی -->
+  <section class="official-section fade-in">
+    <h2>✅ حساب‌های رسمی ViaChart</h2>
+    <ul class="official-list">
+      <li>
+        <span>📢 کانال تلگرام:</span>
+        <a href="https://t.me/viachart_app" target="_blank">@viachart_app</a>
+        <span class="badge">رسمی</span>
+      </li>
+      <li>
+        <span>🐦 توییتر (X):</span>
+        <a href="https://x.com/viachat_app" target="_blank">@viachat_app</a>
+        <span class="badge">رسمی</span>
+      </li>
+      <li>
+        <span>🌐 وب‌سایت:</span>
+        <a href="https://aliafshartm-star.github.io/viachart/" target="_blank">aliafshartm-star.github.io/viachart</a>
+        <span class="badge">رسمی</span>
+      </li>
+    </ul>
+    <p style="color: #a0b3c8; font-size: 0.95em;">
+      🔹 فقط از طریق لینک‌های بالا با ما در ارتباط باشید. هر حساب دیگری به نام ViaChart جعلی است.
+    </p>
+  </section>
+
+  <!-- هشدار امنیتی -->
+  <section class="warning-section fade-in">
+    <h2>⚠️ هشدار امنیتی مهم</h2>
+    <ul>
+      <li>ما هیچ‌وقت از شما پول، اطلاعات کیف پول یا رمز عبور نمی‌خواهیم.</li>
+      <li>هیچ ادمین ViaChart به شما پیام مستقیم (DM) نمی‌دهد.</li>
+      <li>ما هیچ‌وقت از شما نمی‌خواهیم برای عضویت در کانال VIP یا گروه خصوصی پول واریز کنید.</li>
+      <li>اگر کسی با نام ViaChart به شما پیام داد، فوراً بلاکش کنید.</li>
+      <li>هرگونه حساب یا کانال جعلی را می‌توانید از طریق کانال رسمی به ما گزارش دهید.</li>
+      <li>فقط به لینک‌های موجود در این صفحه یا پست‌های رسمی کانال اعتماد کنید.</li>
+    </ul>
   </section>
 
   <!-- سوالات متداول -->
@@ -470,27 +500,32 @@
     
     <div class="faq-item">
       <div class="faq-question">آیا سیگنال‌های ViaChart تضمینی هستند؟</div>
-      <div class="faq-answer">خیر. ما هیچ‌وقت سود تضمینی نمی‌دیم. تمام سیگنال‌ها با مدیریت ریسک ارائه می‌شن و مسئولیت تصمیم نهایی با خودتونه. شفافیت رکورد سیگنال‌ها یکی از اصول اصلی ماست.</div>
+      <div class="faq-answer">خیر. ما هیچ‌وقت سود تضمینی نمی‌دیم. تمام سیگنال‌ها با مدیریت ریسک ارائه می‌شن و مسئولیت تصمیم نهایی با خودتونه.</div>
     </div>
     
     <div class="faq-item">
       <div class="faq-question">عضویت در کانال هزینه‌ای داره؟</div>
-      <div class="faq-answer">خیر، عضویت در کانال اصلی ViaChart کاملاً رایگانه. ما محتوای روزانه، اخبار، تحلیل و سیگنال‌های عمومی رو به صورت رایگان ارائه می‌دیم.</div>
+      <div class="faq-answer">خیر، عضویت در کانال اصلی ViaChart کاملاً رایگانه.</div>
     </div>
     
     <div class="faq-item">
       <div class="faq-question">محتوای کانال به چه زبانیه؟</div>
-      <div class="faq-answer">محتوای ما دوزبانه است. بخش عمده‌ای به فارسی ارائه می‌شه، و تحلیل‌ها و سیگنال‌های کلیدی به انگلیسی هم ترجمه می‌شن تا مخاطبان بین‌المللی هم بتونن استفاده کنن.</div>
+      <div class="faq-answer">محتوای ما دوزبانه است. بخش عمده‌ای به فارسی ارائه می‌شه، و تحلیل‌های کلیدی به انگلیسی هم ترجمه می‌شن.</div>
     </div>
     
     <div class="faq-item">
       <div class="faq-question">چطور می‌تونم عضو بشم؟</div>
-      <div class="faq-answer">کافیه روی دکمه «عضویت در کانال تلگرام» بالای همین صفحه بزنی. همچنین می‌تونی ما رو در توییتر دنبال کنی تا از جدیدترین تحلیل‌ها باخبر بشی.</div>
+      <div class="faq-answer">کافیه روی دکمه «عضویت در کانال تلگرام» بالای همین صفحه بزنی.</div>
     </div>
     
     <div class="faq-item">
       <div class="faq-question">آیا آموزش هم دارید؟</div>
-      <div class="faq-answer">بله. ما به صورت دوره‌ای محتوای آموزشی درباره مدیریت سرمایه، تحلیل تکنیکال و روانشناسی ترید منتشر می‌کنیم تا تریدرهای تازه‌کار هم بتونن ازش استفاده کنن.</div>
+      <div class="faq-answer">بله. ما به صورت دوره‌ای محتوای آموزشی درباره مدیریت سرمایه، تحلیل تکنیکال و روانشناسی ترید منتشر می‌کنیم.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">چطور مطمئن بشم حساب رسمی رو پیدا کردم؟</div>
+      <div class="faq-answer">فقط از لینک‌های موجود در بخش «حساب‌های رسمی ViaChart» در همین صفحه استفاده کنید. ما هیچ‌وقت از طریق پیام مستقیم با شما ارتباط نمی‌گیریم.</div>
     </div>
   </section>
 
@@ -509,9 +544,7 @@
 
 </div>
 
-<!-- اسکریپت‌ها -->
 <script>
-  // قیمت لحظه‌ای از CoinGecko
   async function fetchPrices() {
     try {
       const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana&vs_currencies=usd&include_24hr_change=true');
@@ -549,18 +582,15 @@
     }
   }
   
-  // بارگذاری اولیه و رفرش هر ۶۰ ثانیه
   fetchPrices();
   setInterval(fetchPrices, 60000);
   
-  // FAQ Accordion
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {
       q.parentElement.classList.toggle('active');
     });
   });
   
-  // انیمیشن ورود
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
