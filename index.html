@@ -1,42 +1,576 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <!-- کد تایید Bing -->
+  <!-- تایید Bing -->
   <meta name="msvalidate.01" content="8114A0C742CCF9EA79C21291BEC69D0D" />
-  <!-- کد تایید Google -->
+  <!-- تایید Google -->
   <meta name="google-site-verification" content="1mMciR0HotXCioqxLtKPLBGcSnqshBR8wo0NnfYgc44" />
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ViaChart | کانال سیگنال و تحلیل کریپتو فارسی</title>
+  <title>ViaChart | کانال سیگنال و تحلیل تخصصی کریپتو فارسی</title>
   <meta name="description" content="ViaChart (ویاچارت): بهترین کانال سیگنال و تحلیل تخصصی کریپتو فارسی. اخبار لحظه‌ای ارز دیجیتال، مدیریت سرمایه و جامعه تریدرهای حرفه‌ای.">
   <meta name="keywords" content="ViaChart, viachart_app, سیگنال کریپتو, تحلیل کریپتو, اخبار ارز دیجیتال, مدیریت سرمایه, Crypto Signals, Persian Crypto, Bitcoin, Ethereum">
+  
   <style>
-    body { font-family: Tahoma, Arial, sans-serif; background-color: #0e1621; color: #f1f1f1; max-width: 700px; margin: 40px auto; padding: 20px; line-height: 1.8; text-align: right; }
-    h1, h2, h3 { color: #5bc0de; }
-    a.btn { display: inline-block; padding: 14px 28px; background-color: #0088cc; color: #fff; text-decoration: none; border-radius: 10px; font-weight: bold; margin-top: 10px; }
-    a.btn:hover { background-color: #0077b3; }
-    .card { background-color: #17212b; padding: 20px; border-radius: 12px; margin-bottom: 20px; }
-    .keywords { font-size: 13px; color: #8b9bb4; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Tahoma', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #0a0e27 0%, #0e1621 50%, #1a1f3a 100%);
+      color: #f1f1f1;
+      line-height: 1.9;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* هدر و لوگو */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      position: relative;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(91,192,222,0.15) 0%, transparent 70%);
+      z-index: -1;
+      animation: pulse 4s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+      50% { opacity: 1; transform: translateX(-50%) scale(1.1); }
+    }
+    
+    .hero h1 {
+      font-size: 2.5em;
+      background: linear-gradient(135deg, #5bc0de, #4a90e2, #9b59b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 15px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    
+    .hero .subtitle {
+      font-size: 1.1em;
+      color: #a0b3c8;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+    
+    .tagline {
+      display: inline-block;
+      background: rgba(91,192,222,0.15);
+      color: #5bc0de;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 0.9em;
+      margin-bottom: 25px;
+      border: 1px solid rgba(91,192,222,0.3);
+    }
+    
+    /* دکمه‌های CTA */
+    .cta-group {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #0088cc, #0066aa);
+      color: #fff;
+      box-shadow: 0 5px 20px rgba(0,136,204,0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0,136,204,0.5);
+    }
+    
+    .btn-twitter {
+      background: linear-gradient(135deg, #1DA1F2, #0d8ddb);
+      color: #fff;
+      box-shadow: 0 5px 20px rgba(29,161,242,0.3);
+    }
+    
+    .btn-twitter:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(29,161,242,0.5);
+    }
+    
+    /* کارت قیمت‌ها */
+    .prices-section {
+      margin: 40px 0;
+    }
+    
+    .prices-section h2 {
+      text-align: center;
+      color: #5bc0de;
+      margin-bottom: 25px;
+      font-size: 1.5em;
+    }
+    
+    .prices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+    
+    .price-card {
+      background: rgba(23,33,43,0.8);
+      border: 1px solid rgba(91,192,222,0.15);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .price-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(91,192,222,0.5);
+      box-shadow: 0 10px 30px rgba(91,192,222,0.15);
+    }
+    
+    .price-card .coin-name {
+      font-size: 0.95em;
+      color: #8b9bb4;
+      margin-bottom: 8px;
+    }
+    
+    .price-card .coin-price {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    
+    .price-card .coin-change {
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+    
+    .up { color: #4ade80; }
+    .down { color: #f87171; }
+    
+    /* بخش ویژگی‌ها */
+    .features-section {
+      margin: 50px 0;
+    }
+    
+    .features-section h2 {
+      text-align: center;
+      color: #5bc0de;
+      margin-bottom: 30px;
+      font-size: 1.5em;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    
+    .feature-card {
+      background: rgba(23,33,43,0.6);
+      border: 1px solid rgba(91,192,222,0.1);
+      border-radius: 15px;
+      padding: 25px;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      border-color: rgba(91,192,222,0.4);
+      transform: translateY(-3px);
+    }
+    
+    .feature-icon {
+      font-size: 2em;
+      margin-bottom: 12px;
+      display: block;
+    }
+    
+    .feature-card h3 {
+      color: #5bc0de;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+    
+    .feature-card p {
+      color: #a0b3c8;
+      font-size: 0.95em;
+    }
+    
+    /* بخش درباره ما */
+    .about-section {
+      margin: 50px 0;
+      background: rgba(23,33,43,0.6);
+      border-radius: 15px;
+      padding: 30px;
+      border: 1px solid rgba(91,192,222,0.1);
+    }
+    
+    .about-section h2 {
+      color: #5bc0de;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+    
+    .about-section p {
+      color: #d1d9e0;
+      margin-bottom: 15px;
+    }
+    
+    /* FAQ */
+    .faq-section {
+      margin: 50px 0;
+    }
+    
+    .faq-section h2 {
+      text-align: center;
+      color: #5bc0de;
+      margin-bottom: 30px;
+      font-size: 1.5em;
+    }
+    
+    .faq-item {
+      background: rgba(23,33,43,0.6);
+      border: 1px solid rgba(91,192,222,0.1);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .faq-item:hover {
+      border-color: rgba(91,192,222,0.3);
+    }
+    
+    .faq-question {
+      padding: 18px 22px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #d1d9e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5em;
+      color: #5bc0de;
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      color: #a0b3c8;
+      padding: 0 22px;
+      font-size: 0.95em;
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 0 22px 18px;
+    }
+    
+    /* فوتر */
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      color: #6c7a8a;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(91,192,222,0.1);
+      margin-top: 50px;
+    }
+    
+    footer a {
+      color: #5bc0de;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(91,192,222,0.1);
+      color: #5bc0de;
+      text-decoration: none;
+      font-size: 1.3em;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background: rgba(91,192,222,0.3);
+      transform: translateY(-3px);
+    }
+    
+    /* واکنش‌گرا */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8em; }
+      .hero .subtitle { font-size: 1em; }
+      .prices-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: 1fr; }
+      .btn { padding: 12px 22px; font-size: 0.95em; }
+    }
+    
+    /* انیمیشن ورود */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
 
-  <div class="card">
+<div class="container">
+
+  <!-- هیرو -->
+  <section class="hero">
+    <span class="tagline">🌐 Persian & English Community</span>
     <h1>ViaChart | ویاچارت</h1>
-    <p>کانال رسمی <strong>ViaChart</strong> برای اخبار لحظه‌ای، تحلیل تخصصی و سیگنال‌های کریپتو با مدیریت سرمایه.</p>
-    <p><a href="https://t.me/viachart_app" class="btn">🚀 عضویت در کانال تلگرام</a></p>
-  </div>
+    <p class="subtitle">
+      مرجع تخصصی اخبار لحظه‌ای، تحلیل تکنیکال و فاندامنتال، و سیگنال‌های حرفه‌ای کریپتو با تمرکز بر مدیریت ریسک.
+    </p>
+    <div class="cta-group">
+      <a href="https://t.me/viachart_app" class="btn btn-primary">
+        🚀 عضویت در کانال تلگرام
+      </a>
+      <a href="https://x.com/viachat_app" class="btn btn-twitter">
+        🐦 دنبال کردن در توییتر
+      </a>
+    </div>
+  </section>
 
-  <div class="card">
-    <h2>درباره ما</h2>
-    <p>ViaChart یک کانال تخصصی برای تریدرهای فارسی‌زبان و انگلیسی‌زبان در بازار ارزهای دیجیتال است. ما اخبار لحظه‌ای، تحلیل تکنیکال و فاندامنتال، و سیگنال‌های حرفه‌ای فیوچرز و اسپات ارائه می‌دهیم.</p>
-  </div>
+  <!-- قیمت‌های لحظه‌ای -->
+  <section class="prices-section fade-in">
+    <h2>📊 قیمت لحظه‌ای بازار</h2>
+    <div class="prices-grid" id="prices-grid">
+      <div class="price-card">
+        <div class="coin-name">Bitcoin (BTC)</div>
+        <div class="coin-price">Loading...</div>
+        <div class="coin-change">---</div>
+      </div>
+      <div class="price-card">
+        <div class="coin-name">Ethereum (ETH)</div>
+        <div class="coin-price">Loading...</div>
+        <div class="coin-change">---</div>
+      </div>
+      <div class="price-card">
+        <div class="coin-name">BNB</div>
+        <div class="coin-price">Loading...</div>
+        <div class="coin-change">---</div>
+      </div>
+      <div class="price-card">
+        <div class="coin-name">Solana (SOL)</div>
+        <div class="coin-price">Loading...</div>
+        <div class="coin-change">---</div>
+      </div>
+    </div>
+  </section>
 
-  <div class="card">
-    <h3>کلیدواژه‌ها</h3>
-    <p class="keywords">سیگنال کریپتو، تحلیل کریپتو، اخبار ارز دیجیتال، مدیریت سرمایه، ViaChart، viachart_app، Crypto Signals، Crypto Analysis، Persian Crypto Community</p>
-  </div>
+  <!-- ویژگی‌ها -->
+  <section class="features-section fade-in">
+    <h2>✨ چرا ViaChart؟</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">📰</span>
+        <h3>اخبار لحظه‌ای</h3>
+        <p>پوشش سریع و دقیق مهم‌ترین اخبار بازار کریپتو با تحلیل تأثیرش بر روند بازار.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📈</span>
+        <h3>تحلیل تخصصی</h3>
+        <p>تحلیل تکنیکال و فاندامنتال توسط تیم حرفه‌ای، با سناریوهای صعودی و نزولی.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🎯</span>
+        <h3>سیگنال‌های شفاف</h3>
+        <p>سیگنال‌های فیوچرز و اسپات با حد ضرر و مدیریت سرمایه، بدون وعده سود تضمینی.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🛡️</span>
+        <h3>مدیریت ریسک</h3>
+        <p>آموزش و تمرکز بر حفظ سرمایه، با قانون ۱٪ و مدیریت ریسک حرفه‌ای.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- درباره ما -->
+  <section class="about-section fade-in">
+    <h2>📖 درباره ViaChart</h2>
+    <p>
+      ViaChart یک کانال تخصصی برای تریدرهای فارسی‌زبان و انگلیسی‌زبان در بازار ارزهای دیجیتال است. ما با تمرکز بر اخبار لحظه‌ای، تحلیل تکنیکال و فاندامنتال، و ارائه سیگنال‌های حرفه‌ای فیوچرز و اسپات، به کاربران کمک می‌کنیم تا با مدیریت سرمایه و کنترل ریسک، تصمیم‌های هوشمندانه‌تری بگیرند.
+    </p>
+    <p>
+      هدف ما ایجاد یک جامعه شفاف و قابل اعتماد است که در آن رکورد سیگنال‌ها به‌صورت کامل نمایش داده می‌شود و هیچ وعده سود تضمینی داده نمی‌شود. چه تازه‌کار باشید و چه حرفه‌ای، ViaChart می‌تواند همراه شما در مسیر ترید باشد.
+    </p>
+  </section>
+
+  <!-- سوالات متداول -->
+  <section class="faq-section fade-in">
+    <h2>❓ سوالات متداول</h2>
+    
+    <div class="faq-item">
+      <div class="faq-question">آیا سیگنال‌های ViaChart تضمینی هستند؟</div>
+      <div class="faq-answer">خیر. ما هیچ‌وقت سود تضمینی نمی‌دیم. تمام سیگنال‌ها با مدیریت ریسک ارائه می‌شن و مسئولیت تصمیم نهایی با خودتونه. شفافیت رکورد سیگنال‌ها یکی از اصول اصلی ماست.</div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">عضویت در کانال هزینه‌ای داره؟</div>
+      <div class="faq-answer">خیر، عضویت در کانال اصلی ViaChart کاملاً رایگانه. ما محتوای روزانه، اخبار، تحلیل و سیگنال‌های عمومی رو به صورت رایگان ارائه می‌دیم.</div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">محتوای کانال به چه زبانیه؟</div>
+      <div class="faq-answer">محتوای ما دوزبانه است. بخش عمده‌ای به فارسی ارائه می‌شه، و تحلیل‌ها و سیگنال‌های کلیدی به انگلیسی هم ترجمه می‌شن تا مخاطبان بین‌المللی هم بتونن استفاده کنن.</div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">چطور می‌تونم عضو بشم؟</div>
+      <div class="faq-answer">کافیه روی دکمه «عضویت در کانال تلگرام» بالای همین صفحه بزنی. همچنین می‌تونی ما رو در توییتر دنبال کنی تا از جدیدترین تحلیل‌ها باخبر بشی.</div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">آیا آموزش هم دارید؟</div>
+      <div class="faq-answer">بله. ما به صورت دوره‌ای محتوای آموزشی درباره مدیریت سرمایه، تحلیل تکنیکال و روانشناسی ترید منتشر می‌کنیم تا تریدرهای تازه‌کار هم بتونن ازش استفاده کنن.</div>
+    </div>
+  </section>
+
+  <!-- فوتر -->
+  <footer>
+    <div class="social-links">
+      <a href="https://t.me/viachart_app" title="Telegram">✈️</a>
+      <a href="https://x.com/viachat_app" title="Twitter/X">🐦</a>
+      <a href="https://aliafshartm-star.github.io/viachart/" title="Website">🌐</a>
+    </div>
+    <p>© 2025 ViaChart | تمامی حقوق محفوظ است.</p>
+    <p style="margin-top: 10px; font-size: 0.85em;">
+      ⚠️ محتوای این سایت و کانال، توصیه مالی نیست. مسئولیت تصمیم‌های معاملاتی با خودتونه.
+    </p>
+  </footer>
+
+</div>
+
+<!-- اسکریپت‌ها -->
+<script>
+  // قیمت لحظه‌ای از CoinGecko
+  async function fetchPrices() {
+    try {
+      const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana&vs_currencies=usd&include_24hr_change=true');
+      const data = await res.json();
+      
+      const coins = [
+        { id: 'bitcoin', name: 'Bitcoin (BTC)' },
+        { id: 'ethereum', name: 'Ethereum (ETH)' },
+        { id: 'binancecoin', name: 'BNB' },
+        { id: 'solana', name: 'Solana (SOL)' }
+      ];
+      
+      const grid = document.getElementById('prices-grid');
+      grid.innerHTML = '';
+      
+      coins.forEach(coin => {
+        const info = data[coin.id];
+        if (!info) return;
+        
+        const price = info.usd.toLocaleString('en-US', { maximumFractionDigits: 2 });
+        const change = info.usd_24h_change ? info.usd_24h_change.toFixed(2) : '0.00';
+        const changeClass = change >= 0 ? 'up' : 'down';
+        const arrow = change >= 0 ? '▲' : '▼';
+        
+        grid.innerHTML += `
+          <div class="price-card">
+            <div class="coin-name">${coin.name}</div>
+            <div class="coin-price">$${price}</div>
+            <div class="coin-change ${changeClass}">${arrow} ${Math.abs(change)}%</div>
+          </div>
+        `;
+      });
+    } catch (e) {
+      console.error('Error fetching prices:', e);
+    }
+  }
+  
+  // بارگذاری اولیه و رفرش هر ۶۰ ثانیه
+  fetchPrices();
+  setInterval(fetchPrices, 60000);
+  
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('active');
+    });
+  });
+  
+  // انیمیشن ورود
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
