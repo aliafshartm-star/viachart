@@ -205,7 +205,6 @@
     .about-section h2 { color: #5bc0de; margin-bottom: 20px; font-size: 1.5em; }
     .about-section p { color: #d1d9e0; margin-bottom: 15px; }
     
-    /* کارت بنیان‌گذار */
     .founder-card {
       margin-top: 25px;
       padding: 20px;
@@ -232,19 +231,9 @@
       flex-shrink: 0;
     }
     
-    .founder-info h4 {
-      color: #d1b3ff;
-      margin-bottom: 5px;
-      font-size: 1.1em;
-    }
+    .founder-info h4 { color: #d1b3ff; margin-bottom: 5px; font-size: 1.1em; }
+    .founder-info p { color: #a0b3c8; font-size: 0.9em; margin: 0; }
     
-    .founder-info p {
-      color: #a0b3c8;
-      font-size: 0.9em;
-      margin: 0;
-    }
-    
-    /* بخش حساب‌های رسمی */
     .official-section {
       margin: 50px 0;
       background: linear-gradient(135deg, rgba(23,33,43,0.9), rgba(26,31,58,0.9));
@@ -262,10 +251,7 @@
       gap: 10px;
     }
     
-    .official-list {
-      list-style: none;
-      margin-bottom: 25px;
-    }
+    .official-list { list-style: none; margin-bottom: 25px; }
     
     .official-list li {
       padding: 12px 0;
@@ -297,7 +283,6 @@
     
     .official-list a:hover { text-decoration: underline; }
     
-    /* بخش هشدار */
     .warning-section {
       margin: 30px 0 50px;
       background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(220,38,38,0.05));
@@ -325,10 +310,7 @@
       gap: 10px;
     }
     
-    .warning-section li::before {
-      content: '⚠️';
-      flex-shrink: 0;
-    }
+    .warning-section li::before { content: '⚠️'; flex-shrink: 0; }
     
     .faq-section { margin: 50px 0; }
     .faq-section h2 { text-align: center; color: #5bc0de; margin-bottom: 30px; font-size: 1.5em; }
@@ -447,6 +429,13 @@
         🐦 دنبال کردن در توییتر
       </a>
     </div>
+  </section>
+
+  <!-- لینک به بلاگ -->
+  <section class="features-section fade-in" style="text-align: center; margin-top: 30px;">
+    <a href="blog.html" class="btn btn-primary" style="display: inline-flex;">
+      📚 مطالعه مقالات آموزشی
+    </a>
   </section>
 
   <!-- قیمت‌های لحظه‌ای -->
@@ -617,27 +606,43 @@
 </div>
 
 <script>
+  // آرایه کوین‌ها با ID های CoinLore
+  const coins = [
+    { id: '90', name: 'Bitcoin (BTC)' },
+    { id: '80', name: 'Ethereum (ETH)' },
+    { id: '2710', name: 'BNB' },
+    { id: '48543', name: 'Solana (SOL)' }
+  ];
+  
   async function fetchPrices() {
     try {
-      const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana&vs_currencies=usd&include_24hr_change=true');
-      const data = await res.json();
+      const res = await fetch('https://api.coinlore.net/api/tickers/');
+      const json = await res.json();
+      const data = json.data;
       
-      const coins = [
-        { id: 'bitcoin', name: 'Bitcoin (BTC)' },
-        { id: 'ethereum', name: 'Ethereum (ETH)' },
-        { id: 'binancecoin', name: 'BNB' },
-        { id: 'solana', name: 'Solana (SOL)' }
-      ];
+      if (!data || !Array.isArray(data)) {
+        console.error('Invalid API response');
+        return;
+      }
       
       const grid = document.getElementById('prices-grid');
       grid.innerHTML = '';
       
       coins.forEach(coin => {
-        const info = data[coin.id];
-        if (!info) return;
+        const info = data.find(c => c.id === coin.id);
+        if (!info) {
+          grid.innerHTML += `
+            <div class="price-card">
+              <div class="coin-name">${coin.name}</div>
+              <div class="coin-price">N/A</div>
+              <div class="coin-change">---</div>
+            </div>
+          `;
+          return;
+        }
         
-        const price = info.usd.toLocaleString('en-US', { maximumFractionDigits: 2 });
-        const change = info.usd_24h_change ? info.usd_24h_change.toFixed(2) : '0.00';
+        const price = parseFloat(info.price_usd).toLocaleString('en-US', { maximumFractionDigits: 2 });
+        const change = parseFloat(info.percent_change_24h).toFixed(2);
         const changeClass = change >= 0 ? 'up' : 'down';
         const arrow = change >= 0 ? '▲' : '▼';
         
@@ -649,20 +654,64 @@
           </div>
         `;
       });
+      
+      console.log('✅ Prices updated at:', new Date().toLocaleTimeString());
+      
     } catch (e) {
-      console.error('Error fetching prices:', e);
+      console.error('CoinLore failed, trying CoinCap...', e);
+      
+      // Fallback: CoinCap
+      try {
+        const res2 = await fetch('https://api.coincap.io/v2/assets?ids=bitcoin,ethereum,binance-coin,solana');
+        const json2 = await res2.json();
+        const data2 = json2.data;
+        
+        const grid = document.getElementById('prices-grid');
+        grid.innerHTML = '';
+        
+        const map = {
+          'bitcoin': 'Bitcoin (BTC)',
+          'ethereum': 'Ethereum (ETH)',
+          'binance-coin': 'BNB',
+          'solana': 'Solana (SOL)'
+        };
+        
+        data2.forEach(asset => {
+          const price = parseFloat(asset.priceUsd).toLocaleString('en-US', { maximumFractionDigits: 2 });
+          const change = parseFloat(asset.changePercent24Hr).toFixed(2);
+          const changeClass = change >= 0 ? 'up' : 'down';
+          const arrow = change >= 0 ? '▲' : '▼';
+          
+          grid.innerHTML += `
+            <div class="price-card">
+              <div class="coin-name">${map[asset.id] || asset.name}</div>
+              <div class="coin-price">$${price}</div>
+              <div class="coin-change ${changeClass}">${arrow} ${Math.abs(change)}%</div>
+            </div>
+          `;
+        });
+        
+        console.log('✅ Prices updated via CoinCap at:', new Date().toLocaleTimeString());
+        
+      } catch (e2) {
+        console.error('Fallback also failed:', e2);
+      }
     }
   }
   
+  // بارگذاری اولیه
   fetchPrices();
+  // رفرش هر ۶۰ ثانیه
   setInterval(fetchPrices, 60000);
   
+  // FAQ Accordion
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {
       q.parentElement.classList.toggle('active');
     });
   });
   
+  // انیمیشن ورود
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
