@@ -4,17 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- سئوی قوی برای اسم علی افشار -->
   <title>Ali Afshar (علی افشار) | aliafshartm - Official Website</title>
-  <meta name="description" content="Official website of Ali Afshar (علی افشار), also known as aliafshartm. Software Developer, Game Creator, and Founder of ViaChart. Your trusted source for crypto analysis and Web3 insights.">
-  <meta name="keywords" content="علی افشار, Ali Afshar, aliafshartm, ViaChart, Software Developer, Game Creator, Crypto Signals, Web3, Persian Developer, برنامه نویس">
+  <meta name="description" content="Official website of Ali Afshar (علی افشار), also known as aliafshartm. Software Developer, Game Creator, and Founder of ViaChart. Crypto market prices, top exchange guides, and Web3 insights.">
+  <meta name="keywords" content="علی افشار, Ali Afshar, aliafshartm, ViaChart, Software Developer, Crypto Signals, Bitcoin Price, Binance, KuCoin, Web3, Persian Developer">
   <meta name="author" content="Ali Afshar (علی افشار)">
   
-  <!-- Google & Bing Verification -->
   <meta name="msvalidate.01" content="8114A0C742CCF9EA79C21291BEC69D0D" />
   <meta name="google-site-verification" content="1mMciR0HotXCioqxLtKPLBGcSnqshBR8wo0NnfYgc44" />
 
-  <!-- Schema Markup (به گوگل میگه اینا همه یه نفر هستن) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,7 +20,6 @@
     "alternateName": ["aliafshartm", "علی افشار"],
     "url": "https://aliafshartm-star.github.io/viachart/",
     "jobTitle": "Software Developer & Game Creator",
-    "knowsAbout": ["Software Development", "Game Development", "Cryptocurrency", "Web3", "Risk Management"],
     "sameAs": [
       "https://t.me/viachart_app",
       "https://x.com/viachat_app",
@@ -34,11 +30,10 @@
   </script>
   
   <style>
-    /* ---------- Base & Reset ---------- */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
     body { background-color: #05080f; color: #f1f1f1; line-height: 1.8; overflow-x: hidden; }
 
-    /* ---------- Background Animation ---------- */
+    /* Background Animation */
     .bg-wrapper { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; overflow: hidden; background: #05080f; }
     .bg-image {
       width: 100%; height: 100%;
@@ -48,7 +43,7 @@
       transition: transform 0.1s linear, opacity 0.1s linear; will-change: transform, opacity;
     }
 
-    /* ---------- Navigation ---------- */
+    /* Navigation */
     .navbar {
       position: fixed; top: 0; left: 0; width: 100%; padding: 15px 20px;
       background: rgba(5, 8, 15, 0.85); backdrop-filter: blur(10px);
@@ -66,14 +61,14 @@
     .nav-links {
       position: fixed; top: 0; right: -100%; width: 70%; max-width: 300px; height: 100vh;
       background: rgba(10, 14, 39, 0.98); backdrop-filter: blur(15px);
-      display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 25px;
+      display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 15px;
       transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); border-left: 1px solid rgba(91,192,222,0.2); z-index: 999;
     }
     .nav-links.active { right: 0; }
-    .nav-links a { color: #d1d9e0; text-decoration: none; font-size: 1.2rem; font-weight: bold; transition: all 0.3s; width: 100%; text-align: center; padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .nav-links a { color: #d1d9e0; text-decoration: none; font-size: 1.1rem; font-weight: bold; transition: all 0.3s; width: 100%; text-align: center; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
     .nav-links a:hover { color: #5bc0de; background: rgba(91,192,222,0.1); }
 
-    /* ---------- Container & Hero ---------- */
+    /* Container & Hero */
     .container { max-width: 850px; margin: 0 auto; padding: 80px 15px 20px; position: relative; z-index: 1; }
     .hero { text-align: center; padding: 40px 10px 30px; }
     .avatar-large {
@@ -85,7 +80,7 @@
     .hero h1 span { color: #5bc0de; font-size: 1.5rem; display: block; margin-top: 5px; }
     .hero .subtitle { font-size: 1.1rem; color: #a0b3c8; margin-bottom: 25px; }
 
-    /* ---------- Buttons ---------- */
+    /* Buttons */
     .cta-group { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; padding: 0 10px; }
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 20px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1rem; transition: all 0.3s ease; border: none; cursor: pointer; width: 100%; min-height: 50px; }
     .btn-primary { background: linear-gradient(135deg, #0088cc, #0066aa); color: #fff; }
@@ -94,13 +89,13 @@
     .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; }
     .btn:active { transform: scale(0.98); }
 
-    /* ---------- Sections ---------- */
+    /* Sections */
     .section { background: rgba(15, 22, 35, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(91,192,222,0.15); border-radius: 15px; padding: 25px 20px; margin: 25px 0; }
     .section h2 { color: #5bc0de; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid rgba(91,192,222,0.2); padding-bottom: 10px; }
     .section p { color: #d1d9e0; margin-bottom: 15px; font-size: 1rem; text-align: justify; }
     .section strong { color: #5bc0de; }
 
-    /* ---------- Interactive Tools ---------- */
+    /* Interactive Tools */
     .tools-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
     .tool-box { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; border: 1px solid rgba(91,192,222,0.2); }
     .tool-box h3 { color: #4ade80; margin-bottom: 15px; font-size: 1.1rem; text-align: center; }
@@ -113,7 +108,7 @@
     .greed-value { font-size: 3rem; font-weight: bold; margin: 10px 0; }
     .greed-label { font-size: 1.2rem; font-weight: bold; text-transform: uppercase; }
 
-    /* ---------- Prices (Non-Clickable) ---------- */
+    /* Prices */
     .prices-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .price-card { background: rgba(0,0,0,0.3); border: 1px solid rgba(91,192,222,0.15); border-radius: 12px; padding: 15px 10px; text-align: center; }
     .price-card .coin-name { font-size: 0.8rem; color: #8b9bb4; margin-bottom: 5px; }
@@ -121,16 +116,16 @@
     .price-card .coin-change { font-size: 0.8rem; font-weight: bold; }
     .up { color: #4ade80; } .down { color: #f87171; }
 
-    /* ---------- Testimonials ---------- */
+    /* Testimonials */
     .testimonial-grid { display: flex; flex-direction: column; gap: 15px; }
     .testimonial-card { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border-left: 3px solid #5bc0de; font-style: italic; font-size: 0.95rem; }
     .testimonial-author { margin-top: 10px; font-style: normal; font-weight: bold; color: #4ade80; text-align: right; }
 
-    /* ---------- Footer ---------- */
+    /* Footer */
     footer { text-align: center; padding: 30px 15px; color: #6c7a8a; font-size: 0.85rem; }
     footer a { color: #5bc0de; text-decoration: none; }
 
-    /* ---------- Media Queries ---------- */
+    /* Media Queries */
     @media (min-width: 600px) {
       .container { padding: 100px 20px 40px; }
       .hero h1 { font-size: 3rem; }
@@ -150,15 +145,16 @@
   </div>
 
   <nav class="navbar">
-    <a href="#" class="logo">ALI <span>AFSHAR</span></a>
+    <a href="index.html" class="logo">ALI <span>AFSHAR</span></a>
     <div class="hamburger" id="hamburger">
       <div></div><div></div><div></div>
     </div>
     <div class="nav-links" id="navLinks">
+      <a href="index.html">🏠 Home</a>
       <a href="#about">👨‍💻 About Me</a>
+      <a href="crypto-market.html">💹 Crypto Prices</a>
+      <a href="exchanges.html">🏦 Top Exchanges</a>
       <a href="#tools">🧮 Risk Tools</a>
-      <a href="#market">💹 Live Market</a>
-      <a href="about-ali.html">📄 Portfolio</a>
       <a href="https://t.me/viachart_app" target="_blank">📢 ViaChart Channel</a>
     </div>
   </nav>
@@ -166,7 +162,6 @@
   <div class="container">
     <section class="hero">
       <div class="avatar-large">A</div>
-      <!-- اسم فارسی و انگلیسی به صورت واضح قرار گرفت -->
       <h1>Ali Afshar <span>(علی افشار)</span></h1>
       <p class="subtitle">Known as aliafshartm | Founder of ViaChart</p>
       
@@ -179,7 +174,7 @@
     </section>
 
     <section class="section" id="about">
-      <h2>👨‍💻 About Ali Afshar (علی افشار)</h2>
+      <h2>👨‍💻 About Ali Afshar</h2>
       <p>I am <strong>Ali Afshar (علی افشار)</strong>, known online as <strong>aliafshartm</strong>. I am a dedicated Software Developer and Game Creator with a passion for building innovative, scalable solutions. My expertise spans across <strong>Go (Golang)</strong>, <strong>Python</strong>, and <strong>Web3 technologies</strong>.</p>
       <p>As the founder of <strong>ViaChart</strong>, I have leveraged my technical background to solve real-world problems in the cryptocurrency space, focusing on transparency, risk management, and data-driven analysis.</p>
     </section>
@@ -188,7 +183,6 @@
     <section class="section" id="tools">
       <h2>🧮 Professional Trading Tools</h2>
       <div class="tools-grid">
-        
         <!-- Position Size Calculator -->
         <div class="tool-box">
           <h3>Position Size Calculator</h3>
@@ -207,13 +201,15 @@
           <div class="greed-label" id="fngLabel">Loading...</div>
           <p style="font-size: 0.8rem; margin-top: 10px; color: #8b9bb4;">Current market sentiment</p>
         </div>
-
       </div>
     </section>
 
-    <!-- Live Market (Removed Clickable Link) -->
+    <!-- Live Market -->
     <section class="section" id="market">
       <h2>📊 Live Crypto Market</h2>
+      <p style="font-size: 0.9rem; color: #8b9bb4; text-align: center; margin-bottom: 15px;">
+        <a href="crypto-market.html" style="color: #5bc0de; text-decoration: underline;">View all 50 coins in our Crypto Directory →</a>
+      </p>
       <div class="prices-grid" id="prices-grid">
         <!-- Fetched via JS -->
       </div>
@@ -280,18 +276,14 @@
         resultBox.style.color = "#f87171";
         return;
       }
-
       const riskAmount = balance * (riskPercent / 100);
       const riskPerCoin = Math.abs(entry - stop);
-
       if (riskPerCoin === 0) {
         resultBox.innerHTML = "Entry and Stop Loss cannot be the same.";
         resultBox.style.color = "#f87171";
         return;
       }
-
       const positionSize = riskAmount / riskPerCoin;
-      
       resultBox.innerHTML = `
         Risk Amount: <span style="color:#f87171">$${riskAmount.toFixed(2)}</span><br>
         Position Size: <span style="color:#4ade80">${positionSize.toFixed(4)} Coins</span>
@@ -304,27 +296,20 @@
         const res = await fetch('https://api.alternative.me/fng/');
         const json = await res.json();
         const data = json.data[0];
-        
         const val = parseInt(data.value);
         const label = data.value_classification;
-        
         const valEl = document.getElementById('fngValue');
         const labelEl = document.getElementById('fngLabel');
-        
         valEl.innerText = val;
         labelEl.innerText = label;
-        
         if (val <= 25) { valEl.style.color = '#f87171'; labelEl.style.color = '#f87171'; } 
         else if (val >= 75) { valEl.style.color = '#4ade80'; labelEl.style.color = '#4ade80'; } 
         else { valEl.style.color = '#fbbf24'; labelEl.style.color = '#fbbf24'; } 
-        
-      } catch (e) {
-        document.getElementById('fngLabel').innerText = "Data unavailable";
-      }
+      } catch (e) { document.getElementById('fngLabel').innerText = "Data unavailable"; }
     }
     fetchFNG();
 
-    // --- Live Prices (Fixed: Divs instead of clickable links) ---
+    // --- Live Prices ---
     const coins = [
       { id: '90', name: 'Bitcoin (BTC)' },
       { id: '80', name: 'Ethereum (ETH)' },
@@ -346,8 +331,6 @@
           const change = parseFloat(info.percent_change_24h).toFixed(2);
           const changeClass = change >= 0 ? 'up' : 'down';
           const arrow = change >= 0 ? '▲' : '▼';
-          
-          // اینجا div استفاده کردیم تا کلیک‌پذیر نباشه
           grid.innerHTML += `
             <div class="price-card">
               <div class="coin-name">${coin.name}</div>
