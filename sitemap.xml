@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- صفحه اصلی (Ali Afshar) -->
+  
+  <!-- صفحه اصلی (علی افشار) -->
   <url>
     <loc>https://aliafshartm-star.github.io/viachart/</loc>
     <lastmod>2025-01-15</lastmod>
@@ -24,36 +25,52 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- صفحه بازار ارزها (قیمت‌ها) -->
+  <url>
+    <loc>https://aliafshartm-star.github.io/viachart/crypto-market.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- صفحه راهنمای صرافی‌ها (بایننس، کوینکس) -->
+  <url>
+    <loc>https://aliafshartm-star.github.io/viachart/exchanges.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- بلاگ و مقالات -->
   <url>
     <loc>https://aliafshartm-star.github.io/viachart/blog.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aliafshartm-star.github.io/viachart/results.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aliafshartm-star.github.io/viachart/post-1.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aliafshartm-star.github.io/viachart/post-2.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aliafshartm-star.github.io/viachart/post-3.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aliafshartm-star.github.io/viachart/post-4.html</loc>
@@ -62,11 +79,4 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- صفحه چارت‌های زنده -->
-  <url>
-    <loc>https://aliafshartm-star.github.io/viachart/coin.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
 </urlset>
