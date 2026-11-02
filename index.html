@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Afshar (aliafshartm) | Software & Game Developer</title>
-  <meta name="description" content="Official website of Ali Afshar (aliafshartm). Software Developer, Game Creator, and Founder of ViaChart.">
-  <meta name="keywords" content="aliafshartm, Ali Afshar, Software Developer, Game Creator, ViaChart, Crypto Signals">
+  <title>Ali Afshar (aliafshartm) | Software Developer & Founder of ViaChart</title>
+  <meta name="description" content="Official website of Ali Afshar (aliafshartm). Software Developer, Game Creator, and Founder of ViaChart. Your trusted source for crypto analysis, risk management, and Web3 insights.">
+  <meta name="keywords" content="aliafshartm, Ali Afshar, Software Developer, Game Creator, ViaChart, Best Crypto Channel, Crypto Signals, Risk Management, Web3 Developer, Persian Crypto">
   <meta name="author" content="Ali Afshar">
   
   <!-- Google & Bing Verification -->
@@ -21,6 +21,7 @@
     "alternateName": "aliafshartm",
     "url": "https://aliafshartm-star.github.io/viachart/",
     "jobTitle": "Software Developer & Game Creator",
+    "knowsAbout": ["Software Development", "Game Development", "Cryptocurrency", "Web3", "Risk Management"],
     "sameAs": [
       "https://t.me/viachart_app",
       "https://x.com/viachat_app",
@@ -33,185 +34,136 @@
   <style>
     /* ---------- Base & Reset ---------- */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
-    
-    body {
-      background-color: #05080f;
-      color: #f1f1f1;
-      line-height: 1.8;
-      overflow-x: hidden;
-    }
+    body { background-color: #05080f; color: #f1f1f1; line-height: 1.8; overflow-x: hidden; }
 
     /* ---------- Background Animation ---------- */
-    .bg-wrapper {
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      z-index: -1;
-      overflow: hidden;
-      background: linear-gradient(135deg, #0a0e27 0%, #0e1621 100%);
-    }
-    
+    .bg-wrapper { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; overflow: hidden; background: #05080f; }
     .bg-image {
       width: 100%; height: 100%;
-      background-image: url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=2000&auto=format&fit=crop'); /* عکس بیت کوین */
-      background-size: cover;
-      background-position: center;
-      opacity: 0.15;
-      transform-origin: center center;
-      transition: transform 0.1s linear, opacity 0.1s linear;
-      will-change: transform, opacity;
+      background-image: url('https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=2000&auto=format&fit=crop'); 
+      background-size: cover; background-position: center;
+      opacity: 0.15; transform-origin: center center;
+      transition: transform 0.1s linear, opacity 0.1s linear; will-change: transform, opacity;
     }
 
-    /* ---------- Navigation (Hamburger) ---------- */
+    /* ---------- Navigation ---------- */
     .navbar {
-      position: fixed;
-      top: 0; left: 0; width: 100%;
-      padding: 15px 20px;
-      background: rgba(5, 8, 15, 0.85);
-      backdrop-filter: blur(10px);
+      position: fixed; top: 0; left: 0; width: 100%; padding: 15px 20px;
+      background: rgba(5, 8, 15, 0.85); backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(91,192,222,0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
+      display: flex; justify-content: space-between; align-items: center; z-index: 1000;
     }
-    
-    .logo { font-size: 1.2rem; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 1px; }
+    .logo { font-size: 1.2rem; font-weight: bold; color: #fff; text-decoration: none; }
     .logo span { color: #5bc0de; }
-
-    .hamburger {
-      display: flex; flex-direction: column; justify-content: space-between;
-      width: 30px; height: 20px; cursor: pointer; z-index: 1001;
-    }
-    .hamburger div {
-      width: 100%; height: 3px; background-color: #5bc0de; border-radius: 2px; transition: all 0.3s ease;
-    }
-    
-    /* Hamburger Active State */
+    .hamburger { display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 20px; cursor: pointer; z-index: 1001; }
+    .hamburger div { width: 100%; height: 3px; background-color: #5bc0de; border-radius: 2px; transition: all 0.3s ease; }
     .hamburger.active div:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
     .hamburger.active div:nth-child(2) { opacity: 0; }
     .hamburger.active div:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
-
+    
     .nav-links {
-      position: fixed;
-      top: 0; right: -100%;
-      width: 70%; max-width: 300px; height: 100vh;
-      background: rgba(10, 14, 39, 0.98);
-      backdrop-filter: blur(15px);
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      gap: 30px;
-      transition: right 0.4s ease;
-      border-left: 1px solid rgba(91,192,222,0.2);
-      z-index: 999;
+      position: fixed; top: 0; right: -100%; width: 70%; max-width: 300px; height: 100vh;
+      background: rgba(10, 14, 39, 0.98); backdrop-filter: blur(15px);
+      display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 25px;
+      transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); border-left: 1px solid rgba(91,192,222,0.2); z-index: 999;
     }
     .nav-links.active { right: 0; }
-    .nav-links a {
-      color: #d1d9e0; text-decoration: none; font-size: 1.2rem; font-weight: bold; transition: color 0.3s ease;
-    }
-    .nav-links a:hover { color: #5bc0de; }
+    .nav-links a { color: #d1d9e0; text-decoration: none; font-size: 1.2rem; font-weight: bold; transition: all 0.3s; width: 100%; text-align: center; padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .nav-links a:hover { color: #5bc0de; background: rgba(91,192,222,0.1); }
 
-    /* ---------- Main Container ---------- */
+    /* ---------- Container & Hero ---------- */
     .container { max-width: 850px; margin: 0 auto; padding: 80px 15px 20px; position: relative; z-index: 1; }
-    
-    /* ---------- Hero Section ---------- */
-    .hero { text-align: center; padding: 50px 10px 40px; }
-    
+    .hero { text-align: center; padding: 40px 10px 30px; }
     .avatar-large {
-      width: 110px; height: 110px; border-radius: 50%;
-      background: linear-gradient(135deg, #9b59b6, #5bc0de);
+      width: 110px; height: 110px; border-radius: 50%; background: linear-gradient(135deg, #9b59b6, #5bc0de);
       margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;
-      font-size: 2.5rem; font-weight: bold; color: #fff;
-      box-shadow: 0 10px 30px rgba(91,192,222,0.3);
+      font-size: 2.5rem; font-weight: bold; color: #fff; box-shadow: 0 10px 30px rgba(91,192,222,0.3);
     }
-    
     .hero h1 { font-size: 2.2rem; color: #fff; margin-bottom: 10px; font-weight: 800; }
-    .hero h1 span { color: #5bc0de; }
+    .hero h1 span { color: #5bc0de; font-size: 1.5rem; display: block; margin-top: 5px; }
     .hero .subtitle { font-size: 1.1rem; color: #a0b3c8; margin-bottom: 25px; }
-    
+
     /* ---------- Buttons ---------- */
     .cta-group { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; padding: 0 10px; }
-    
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 14px 20px; border-radius: 12px; text-decoration: none;
-      font-weight: bold; font-size: 1rem; transition: all 0.3s ease;
-      border: none; cursor: pointer; width: 100%; min-height: 50px;
-    }
-    
-    .btn-primary { background: linear-gradient(135deg, #0088cc, #0066aa); color: #fff; box-shadow: 0 5px 20px rgba(0,136,204,0.3); }
-    .btn-twitter { background: linear-gradient(135deg, #1DA1F2, #0d8ddb); color: #fff; box-shadow: 0 5px 20px rgba(29,161,242,0.3); }
-    .btn-youtube { background: linear-gradient(135deg, #FF0000, #CC0000); color: #fff; box-shadow: 0 5px 20px rgba(255,0,0,0.3); }
-    .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; box-shadow: 0 5px 20px rgba(220,39,67,0.3); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 20px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1rem; transition: all 0.3s ease; border: none; cursor: pointer; width: 100%; min-height: 50px; }
+    .btn-primary { background: linear-gradient(135deg, #0088cc, #0066aa); color: #fff; }
+    .btn-twitter { background: linear-gradient(135deg, #1DA1F2, #0d8ddb); color: #fff; }
+    .btn-youtube { background: linear-gradient(135deg, #FF0000, #CC0000); color: #fff; }
+    .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; }
     .btn:active { transform: scale(0.98); }
 
     /* ---------- Sections ---------- */
-    .section {
-      background: rgba(15, 22, 35, 0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(91,192,222,0.15);
-      border-radius: 15px;
-      padding: 25px 20px;
-      margin: 25px 0;
-    }
-    
+    .section { background: rgba(15, 22, 35, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(91,192,222,0.15); border-radius: 15px; padding: 25px 20px; margin: 25px 0; }
     .section h2 { color: #5bc0de; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid rgba(91,192,222,0.2); padding-bottom: 10px; }
-    .section p { color: #d1d9e0; margin-bottom: 15px; font-size: 1rem; }
+    .section p { color: #d1d9e0; margin-bottom: 15px; font-size: 1rem; text-align: justify; }
+    .section strong { color: #5bc0de; }
 
-    /* ---------- Price Grid ---------- */
+    /* ---------- Interactive Tools (Calculator & Index) ---------- */
+    .tools-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    
+    .tool-box { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; border: 1px solid rgba(91,192,222,0.2); }
+    .tool-box h3 { color: #4ade80; margin-bottom: 15px; font-size: 1.1rem; text-align: center; }
+    .tool-box input { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid rgba(91,192,222,0.3); background: #05080f; color: #fff; font-family: inherit; }
+    .tool-box button { width: 100%; padding: 12px; background: #0088cc; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+    .tool-box button:hover { background: #0066aa; }
+    .result-box { margin-top: 15px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #fff; min-height: 30px; }
+
+    .greed-index-box { text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+    .greed-value { font-size: 3rem; font-weight: bold; margin: 10px 0; }
+    .greed-label { font-size: 1.2rem; font-weight: bold; text-transform: uppercase; }
+
+    /* ---------- Prices ---------- */
     .prices-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .price-card { background: rgba(0,0,0,0.3); border: 1px solid rgba(91,192,222,0.15); border-radius: 12px; padding: 15px 10px; text-align: center; }
+    a.price-card { text-decoration: none; color: inherit; display: block; cursor: pointer; transition: all 0.3s ease; background: rgba(0,0,0,0.3); border: 1px solid rgba(91,192,222,0.15); border-radius: 12px; padding: 15px 10px; text-align: center; }
+    a.price-card:hover { border-color: #5bc0de; transform: translateY(-3px); background: rgba(91,192,222,0.05); }
     .price-card .coin-name { font-size: 0.8rem; color: #8b9bb4; margin-bottom: 5px; }
     .price-card .coin-price { font-size: 1.1rem; font-weight: bold; color: #fff; }
     .price-card .coin-change { font-size: 0.8rem; font-weight: bold; }
     .up { color: #4ade80; } .down { color: #f87171; }
 
-    /* ---------- Official Links ---------- */
-    .official-list { list-style: none; }
-    .official-list li { padding: 10px 0; border-bottom: 1px solid rgba(91,192,222,0.1); display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
-    .official-list li:last-child { border-bottom: none; }
-    .official-list a { color: #5bc0de; text-decoration: none; font-weight: bold; }
+    /* ---------- Testimonials ---------- */
+    .testimonial-grid { display: flex; flex-direction: column; gap: 15px; }
+    .testimonial-card { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border-left: 3px solid #5bc0de; font-style: italic; font-size: 0.95rem; }
+    .testimonial-author { margin-top: 10px; font-style: normal; font-weight: bold; color: #4ade80; text-align: right; }
 
     /* ---------- Footer ---------- */
     footer { text-align: center; padding: 30px 15px; color: #6c7a8a; font-size: 0.85rem; }
     footer a { color: #5bc0de; text-decoration: none; }
 
-    /* ---------- Media Queries (Tablets/Desktops) ---------- */
+    /* ---------- Media Queries ---------- */
     @media (min-width: 600px) {
       .container { padding: 100px 20px 40px; }
       .hero h1 { font-size: 3rem; }
-      .hero .subtitle { font-size: 1.2rem; }
+      .hero h1 span { display: inline; font-size: 2.5rem; margin-left: 10px; }
       .cta-group { flex-direction: row; justify-content: center; flex-wrap: wrap; }
       .btn { width: auto; padding: 14px 30px; }
       .prices-grid { grid-template-columns: repeat(4, 1fr); }
       .section { padding: 35px; }
+      .tools-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Background Animation -->
   <div class="bg-wrapper">
     <div class="bg-image" id="bgImage"></div>
   </div>
 
-  <!-- Navbar -->
   <nav class="navbar">
     <a href="#" class="logo">ALI <span>AFSHAR</span></a>
     <div class="hamburger" id="hamburger">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div></div><div></div><div></div>
     </div>
     <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="https://t.me/viachart_app" target="_blank">ViaChart</a>
-      <a href="about-ali.html">Portfolio</a>
-      <a href="blog.html">Blog</a>
+      <a href="#about">👨‍💻 About Me</a>
+      <a href="#tools">🧮 Risk Tools</a>
+      <a href="#market">💹 Live Market</a>
+      <a href="about-ali.html">📄 Portfolio</a>
+      <a href="https://t.me/viachart_app" target="_blank">📢 ViaChart Channel</a>
     </div>
   </nav>
 
   <div class="container">
-    
-    <!-- Hero Section -->
     <section class="hero">
       <div class="avatar-large">A</div>
       <h1>Ali Afshar <span>(aliafshartm)</span></h1>
@@ -225,55 +177,81 @@
       </div>
     </section>
 
-    <!-- About Me Section -->
     <section class="section" id="about">
-      <h2>👨‍💻 About Me</h2>
-      <p>I am a passionate Software Developer and Game Creator who loves building innovative solutions. I bridge the gap between traditional software, immersive gaming experiences, and Web3 technology.</p>
-      <p>As the founder of <strong>ViaChart</strong>, I've combined my deep understanding of crypto markets with my technical expertise to create a transparent, risk-focused platform for traders worldwide.</p>
+      <h2>👨‍💻 About Ali Afshar</h2>
+      <p>I am a dedicated <strong>Software Developer</strong> and <strong>Game Creator</strong> with a passion for building innovative, scalable solutions. My expertise spans across <strong>Go (Golang)</strong>, <strong>Python</strong>, and <strong>Web3 technologies</strong>, bridging the gap between traditional software architecture and decentralized applications.</p>
+      <p>As the founder of <strong>ViaChart</strong>, I have leveraged my technical background to solve real-world problems in the cryptocurrency space. ViaChart is a platform built on the core principles of <strong>transparency, risk management, and data-driven analysis</strong>.</p>
     </section>
 
-    <!-- ViaChart Prices Section -->
-    <section class="section">
-      <h2>📊 Live Crypto Market (ViaChart)</h2>
-      <div class="prices-grid" id="prices-grid">
-        <div class="price-card"><div class="coin-name">Bitcoin (BTC)</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
-        <div class="price-card"><div class="coin-name">Ethereum (ETH)</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
-        <div class="price-card"><div class="coin-name">BNB</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
-        <div class="price-card"><div class="coin-name">Solana (SOL)</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
+    <!-- Interactive Tools Section -->
+    <section class="section" id="tools">
+      <h2>🧮 Professional Trading Tools</h2>
+      <div class="tools-grid">
+        
+        <!-- Position Size Calculator -->
+        <div class="tool-box">
+          <h3>Position Size Calculator</h3>
+          <input type="number" id="balance" placeholder="Account Balance ($)" value="1000">
+          <input type="number" id="riskPercent" placeholder="Risk % (e.g. 1 for 1%)" value="1">
+          <input type="number" id="entryPrice" placeholder="Entry Price ($)" value="60000">
+          <input type="number" id="stopLoss" placeholder="Stop Loss Price ($)" value="59000">
+          <button onclick="calculateRisk()">Calculate Position</button>
+          <div class="result-box" id="riskResult"></div>
+        </div>
+
+        <!-- Fear and Greed Index -->
+        <div class="tool-box greed-index-box">
+          <h3>Crypto Fear & Greed Index</h3>
+          <div class="greed-value" id="fngValue">--</div>
+          <div class="greed-label" id="fngLabel">Loading...</div>
+          <p style="font-size: 0.8rem; margin-top: 10px; color: #8b9bb4;">Current market sentiment</p>
+        </div>
+
       </div>
     </section>
 
-    <!-- Official Links -->
-    <section class="section">
-      <h2>✅ Official Links</h2>
-      <ul class="official-list">
-        <li>📢 <strong>Telegram:</strong> <a href="https://t.me/viachart_app" target="_blank">@viachart_app</a></li>
-        <li>🐦 <strong>Twitter:</strong> <a href="https://x.com/viachat_app" target="_blank">@viachat_app</a></li>
-        <li>🎬 <strong>YouTube:</strong> <a href="https://youtube.com/@aliafshartm" target="_blank">@aliafshartm</a></li>
-        <li>📸 <strong>Instagram:</strong> <a href="https://www.instagram.com/aliafshartm" target="_blank">@aliafshartm</a></li>
-      </ul>
-      <p style="margin-top: 15px; font-size: 0.85rem; color: #8b9bb4;">🔹 Only trust the links above. Any other account is fake.</p>
+    <!-- Live Market -->
+    <section class="section" id="market">
+      <h2>📊 Live Crypto Market</h2>
+      <p style="font-size: 0.9rem; color: #8b9bb4; text-align: center; margin-bottom: 15px;">Tap on any coin to view live chart & analysis.</p>
+      <div class="prices-grid" id="prices-grid">
+        <!-- Fetched via JS -->
+      </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Testimonials -->
+    <section class="section">
+      <h2>💬 What Traders Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          "ViaChart completely changed how I trade. The focus on 1% risk management saved my portfolio during the last crash."
+          <div class="testimonial-author">- Sarah M., Crypto Trader</div>
+        </div>
+        <div class="testimonial-card">
+          "Finally, a channel that doesn't promise 100x guaranteed gains. Ali's transparency and charts are top-notch."
+          <div class="testimonial-author">- David K., Investor</div>
+        </div>
+        <div class="testimonial-card">
+          "The bilingual content and technical depth in ViaChart are unmatched. Highly recommended for serious traders."
+          <div class="testimonial-author">- Reza T., Developer</div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <p>© 2025 Ali Afshar (aliafshartm). All rights reserved.</p>
-      <p style="margin-top: 5px;">Founder of <a href="https://t.me/viachart_app">ViaChart</a> | <a href="about-ali.html">Full Portfolio</a></p>
+      <p><a href="best-crypto-signals.html" style="color: #333; text-decoration: none;">.</a></p>
     </footer>
-
   </div>
 
   <script>
-    // --- Hamburger Menu Logic ---
+    // --- Hamburger Menu ---
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
-
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navLinks.classList.toggle('active');
     });
-
-    // Close menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -281,39 +259,87 @@
       });
     });
 
-    // --- Scroll Animation for Background (Bitcoin Zoom) ---
+    // --- Background Scroll ---
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY;
       const bgImage = document.getElementById('bgImage');
-      
-      // Scale from 1 to 2.5 based on scroll
-      const scaleValue = 1 + (scrolled / 1200); 
-      
-      // Slowly fade out as user scrolls
-      const opacityValue = Math.max(0.05, 0.2 - (scrolled / 3000));
-
-      bgImage.style.transform = `scale(${scaleValue})`;
-      bgImage.style.opacity = opacityValue;
+      bgImage.style.transform = `scale(${1 + (scrolled / 1000)})`;
+      bgImage.style.opacity = Math.max(0.05, 0.15 - (scrolled / 3000));
     });
 
-    // --- Live Prices Logic ---
+    // --- Risk Calculator Logic ---
+    function calculateRisk() {
+      const balance = parseFloat(document.getElementById('balance').value);
+      const riskPercent = parseFloat(document.getElementById('riskPercent').value);
+      const entry = parseFloat(document.getElementById('entryPrice').value);
+      const stop = parseFloat(document.getElementById('stopLoss').value);
+      const resultBox = document.getElementById('riskResult');
+
+      if (!balance || !riskPercent || !entry || !stop) {
+        resultBox.innerHTML = "Please fill all fields.";
+        resultBox.style.color = "#f87171";
+        return;
+      }
+
+      const riskAmount = balance * (riskPercent / 100);
+      const riskPerCoin = Math.abs(entry - stop);
+
+      if (riskPerCoin === 0) {
+        resultBox.innerHTML = "Entry and Stop Loss cannot be the same.";
+        resultBox.style.color = "#f87171";
+        return;
+      }
+
+      const positionSize = riskAmount / riskPerCoin;
+      
+      resultBox.innerHTML = `
+        Risk Amount: <span style="color:#f87171">$${riskAmount.toFixed(2)}</span><br>
+        Position Size: <span style="color:#4ade80">${positionSize.toFixed(4)} Coins</span>
+      `;
+    }
+
+    // --- Fetch Fear & Greed Index ---
+    async function fetchFNG() {
+      try {
+        const res = await fetch('https://api.alternative.me/fng/');
+        const json = await res.json();
+        const data = json.data[0];
+        
+        const val = parseInt(data.value);
+        const label = data.value_classification;
+        
+        const valEl = document.getElementById('fngValue');
+        const labelEl = document.getElementById('fngLabel');
+        
+        valEl.innerText = val;
+        labelEl.innerText = label;
+        
+        // Dynamic Colors
+        if (val <= 25) { valEl.style.color = '#f87171'; labelEl.style.color = '#f87171'; } // Extreme Fear / Fear
+        else if (val >= 75) { valEl.style.color = '#4ade80'; labelEl.style.color = '#4ade80'; } // Extreme Greed / Greed
+        else { valEl.style.color = '#fbbf24'; labelEl.style.color = '#fbbf24'; } // Neutral
+        
+      } catch (e) {
+        document.getElementById('fngLabel').innerText = "Data unavailable";
+      }
+    }
+    fetchFNG();
+
+    // --- Live Prices ---
     const coins = [
       { id: '90', name: 'Bitcoin (BTC)' },
       { id: '80', name: 'Ethereum (ETH)' },
       { id: '2710', name: 'BNB' },
       { id: '48543', name: 'Solana (SOL)' }
     ];
-    
     async function fetchPrices() {
       try {
         const res = await fetch('https://api.coinlore.net/api/tickers/');
         const json = await res.json();
         const data = json.data;
-        if (!data || !Array.isArray(data)) return;
-        
+        if (!data) return;
         const grid = document.getElementById('prices-grid');
         grid.innerHTML = '';
-        
         coins.forEach(coin => {
           const info = data.find(c => c.id === coin.id);
           if (!info) return;
@@ -321,22 +347,18 @@
           const change = parseFloat(info.percent_change_24h).toFixed(2);
           const changeClass = change >= 0 ? 'up' : 'down';
           const arrow = change >= 0 ? '▲' : '▼';
-          
           grid.innerHTML += `
-            <div class="price-card">
+            <a href="coin.html?id=${coin.id}" class="price-card">
               <div class="coin-name">${coin.name}</div>
               <div class="coin-price">$${price}</div>
               <div class="coin-change ${changeClass}">${arrow} ${Math.abs(change)}%</div>
-            </div>
+            </a>
           `;
         });
-      } catch (e) {
-        console.error("API Error", e);
-      }
+      } catch (e) { console.error(e); }
     }
     fetchPrices();
     setInterval(fetchPrices, 60000);
   </script>
-
 </body>
 </html>
