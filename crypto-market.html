@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Live Crypto Market Prices | Bitcoin, Solana, Ethereum | Ali Afshar (aliafshartm)</title>
+  <meta name="description" content="Track live cryptocurrency prices for Bitcoin (BTC), Ethereum (ETH), Solana (SOL), Binance Coin (BNB), XRP, and the top 50 altcoins. Market data curated by Ali Afshar (علی افشار) and ViaChart.">
+  
+  <!-- کلمات کلیدی مربوط به قیمت ارزها -->
+  <meta name="keywords" content="Bitcoin price, BTC price, Ethereum price, ETH price, Solana price, SOL price, BNB, XRP, Cardano, Dogecoin, Crypto Market, Live Crypto Prices, علی افشار, aliafshartm, ViaChart, Best Crypto Signals">
+  <meta name="author" content="Ali Afshar (علی افشار)">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background-color: #05080f; color: #f1f1f1; line-height: 1.8; overflow-x: hidden; }
+    
+    /* Navbar */
+    .navbar {
+      position: fixed; top: 0; left: 0; width: 100%; padding: 15px 20px;
+      background: rgba(5, 8, 15, 0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(91,192,222,0.1);
+      display: flex; justify-content: space-between; align-items: center; z-index: 1000;
+    }
+    .navbar a { color: #fff; text-decoration: none; font-weight: bold; }
+    .navbar a span { color: #5bc0de; }
+    .back-btn { background: rgba(91,192,222,0.1); padding: 8px 15px; border-radius: 8px; border: 1px solid rgba(91,192,222,0.3); color: #5bc0de !important; transition: 0.3s; }
+    .back-btn:hover { background: rgba(91,192,222,0.2); }
+
+    .container { max-width: 950px; margin: 80px auto 40px; padding: 20px 15px; }
+    
+    /* Header */
+    .header-title { text-align: center; margin-bottom: 30px; }
+    .header-title h1 { color: #5bc0de; font-size: 2rem; margin-bottom: 10px; }
+    .header-title p { color: #8b9bb4; font-size: 1rem; }
+
+    /* Search Bar */
+    .search-box { width: 100%; max-width: 500px; margin: 0 auto 30px; display: block; padding: 15px; border-radius: 10px; border: 1px solid rgba(91,192,222,0.3); background: rgba(0,0,0,0.3); color: #fff; font-size: 1rem; text-align: center; }
+    .search-box:focus { outline: none; border-color: #5bc0de; box-shadow: 0 0 10px rgba(91,192,222,0.2); }
+
+    /* Coin Grid */
+    .coin-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; }
+    
+    .coin-card {
+      background: rgba(15, 22, 35, 0.7); border: 1px solid rgba(91,192,222,0.15);
+      border-radius: 12px; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+      transition: all 0.3s ease;
+    }
+    .coin-card:hover { border-color: #5bc0de; transform: translateY(-3px); background: rgba(91,192,222,0.05); }
+    
+    .coin-info h3 { font-size: 1.1rem; color: #fff; margin-bottom: 5px; }
+    .coin-info span { font-size: 0.85rem; color: #8b9bb4; text-transform: uppercase; font-weight: bold; }
+    
+    .coin-price-info { text-align: right; }
+    .coin-price-info .price { font-size: 1.1rem; font-weight: bold; color: #fff; }
+    .coin-price-info .change { font-size: 0.85rem; font-weight: bold; }
+    
+    .up { color: #4ade80; } .down { color: #f87171; }
+
+    /* SEO Block (Hidden from normal eyes) */
+    .seo-block {
+      margin-top: 50px; padding-top: 20px; border-top: 1px dashed #1a2232;
+      font-size: 0.65rem; color: #1a2232; text-align: center; line-height: 2; opacity: 0.1;
+    }
+
+    @media (max-width: 600px) {
+      .header-title h1 { font-size: 1.5rem; }
+      .coin-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">ALI <span>AFSHAR</span></a>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </nav>
+
+  <div class="container">
+    <div class="header-title">
+      <h1>📊 Live Crypto Market Directory</h1>
+      <p>Track the top 50 cryptocurrencies in real-time. Data curated by <strong>Ali Afshar (aliafshartm)</strong>.</p>
+    </div>
+
+    <!-- Search Box -->
+    <input type="text" id="searchInput" class="search-box" placeholder="Search coin (e.g. Bitcoin, SOL, ETH)..." onkeyup="filterCoins()">
+
+    <!-- Coins Grid -->
+    <div class="coin-grid" id="coinGrid">
+      <p style="text-align: center; width: 100%; color: #8b9bb4;">Loading live market data...</p>
+    </div>
+
+    <!-- بخش فوق‌العاده مهم برای سئو (تله گوگل) -->
+    <div class="seo-block">
+      <p>Live Crypto Market Prices by Ali Afshar (aliafshartm): Bitcoin (BTC) Price Today, Ethereum (ETH) Analysis, Solana (SOL) Price Prediction, BNB, XRP News, Cardano (ADA), Dogecoin (DOGE), Polygon (MATIC), Polkadot (DOT), Avalanche (AVAX), Chainlink (LINK), Shiba Inu (SHIB), Litecoin (LTC), Uniswap (UNI), Cosmos (ATOM), Toncoin (TON), Near Protocol, Aptos, Arbitrum.</p>
+      <p>قیمت لحظه‌ای ارز دیجیتال توسط علی افشار: قیمت بیت کوین، قیمت اتریوم، قیمت سولانا، قیمت ریپل، قیمت کاردانو، قیمت دوج کوین، قیمت شیبا اینو. تحلیل و سیگنال خرید و فروش بهترین ارزهای دیجیتال در کانال ViaChart.</p>
+    </div>
+  </div>
+
+  <script>
+    let allCoins = [];
+
+    // Fetch Top 50 Coins from CoinLore
+    async function fetchTopCoins() {
+      try {
+        const res = await fetch('https://api.coinlore.net/api/tickers/');
+        const json = await res.json();
+        allCoins = json.data.slice(0, 50); // Get top 50
+        renderCoins(allCoins);
+      } catch (e) {
+        document.getElementById('coinGrid').innerHTML = '<p style="color: #f87171; text-align:center; width:100%;">Failed to load data. Please refresh.</p>';
+      }
+    }
+
+    // Render Coins to HTML
+    function renderCoins(coinsToRender) {
+      const grid = document.getElementById('coinGrid');
+      grid.innerHTML = '';
+      
+      if (coinsToRender.length === 0) {
+        grid.innerHTML = '<p style="text-align: center; width: 100%; color: #f87171;">No coins found.</p>';
+        return;
+      }
+
+      coinsToRender.forEach(coin => {
+        // Format price based on value (to avoid $0.00 for cheap coins)
+        let priceStr = parseFloat(coin.price_usd);
+        let formattedPrice = priceStr < 0.01 ? priceStr.toFixed(5) : priceStr.toLocaleString('en-US', { maximumFractionDigits: 2 });
+        
+        const change = parseFloat(coin.percent_change_24h).toFixed(2);
+        const changeClass = change >= 0 ? 'up' : 'down';
+        const arrow = change >= 0 ? '▲' : '▼';
+
+        grid.innerHTML += `
+          <div class="coin-card">
+            <div class="coin-info">
+              <h3>${coin.name}</h3>
+              <span>${coin.symbol}</span>
+            </div>
+            <div class="coin-price-info">
+              <div class="price">$${formattedPrice}</div>
+              <div class="change ${changeClass}">${arrow} ${Math.abs(change)}%</div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    // Search Filter
+    function filterCoins() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = allCoins.filter(coin => 
+        coin.name.toLowerCase().includes(query) || 
+        coin.symbol.toLowerCase().includes(query)
+      );
+      renderCoins(filtered);
+    }
+
+    // Run on Load
+    fetchTopCoins();
+  </script>
+</body>
+</html>
