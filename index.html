@@ -1,562 +1,342 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
-  <!-- تایید Bing -->
-  <meta name="msvalidate.01" content="8114A0C742CCF9EA79C21291BEC69D0D" />
-  <!-- تایید Google -->
-  <meta name="google-site-verification" content="1mMciR0HotXCioqxLtKPLBGcSnqshBR8wo0NnfYgc44" />
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ViaChart | کانال سیگنال و تحلیل تخصصی کریپتو فارسی</title>
-  <meta name="description" content="ViaChart (ویاچارت): بهترین کانال سیگنال و تحلیل تخصصی کریپتو فارسی. اخبار لحظه‌ای ارز دیجیتال، مدیریت سرمایه و جامعه تریدرهای حرفه‌ای. بنیان‌گذار: علی افشار.">
-  <meta name="keywords" content="ViaChart, viachart_app, سیگنال کریپتو, تحلیل کریپتو, اخبار ارز دیجیتال, مدیریت سرمایه, Crypto Signals, Persian Crypto, Bitcoin, Ethereum, Ali Afshar, aliafshartm">
+  <title>Ali Afshar (aliafshartm) | Software & Game Developer</title>
+  <meta name="description" content="Official website of Ali Afshar (aliafshartm). Software Developer, Game Creator, and Founder of ViaChart.">
+  <meta name="keywords" content="aliafshartm, Ali Afshar, Software Developer, Game Creator, ViaChart, Crypto Signals">
   <meta name="author" content="Ali Afshar">
-  <meta property="og:site_name" content="ViaChart">
-  <meta property="og:title" content="ViaChart | کانال سیگنال و تحلیل تخصصی کریپتو">
-  <meta property="og:description" content="اخبار لحظه‌ای، تحلیل تخصصی و سیگنال‌های حرفه‌ای کریپتو با مدیریت سرمایه.">
-  <meta property="og:url" content="https://aliafshartm-star.github.io/viachart/">
+  
+  <!-- Google & Bing Verification -->
+  <meta name="msvalidate.01" content="8114A0C742CCF9EA79C21291BEC69D0D" />
+  <meta name="google-site-verification" content="1mMciR0HotXCioqxLtKPLBGcSnqshBR8wo0NnfYgc44" />
 
-  <!-- Schema Markup برای اتصال برند، سایت، یوتیوب، اینستاگرام و بنیان‌گذار -->
+  <!-- Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ViaChart",
-    "alternateName": "ویاچارت",
+    "@type": "Person",
+    "name": "Ali Afshar",
+    "alternateName": "aliafshartm",
     "url": "https://aliafshartm-star.github.io/viachart/",
-    "founder": {
-      "@type": "Person",
-      "name": "Ali Afshar",
-      "alternateName": "علی افشار"
-    },
+    "jobTitle": "Software Developer & Game Creator",
     "sameAs": [
       "https://t.me/viachart_app",
       "https://x.com/viachat_app",
       "https://youtube.com/@aliafshartm",
-      "https://www.instagram.com/aliafshar_tm"
+      "https://www.instagram.com/aliafshartm"
     ]
   }
   </script>
   
   <style>
-    /* ---------- Mobile-First Base Styles ---------- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* ---------- Base & Reset ---------- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
     
     body {
-      font-family: 'Tahoma', 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #0a0e27 0%, #0e1621 50%, #1a1f3a 100%);
+      background-color: #05080f;
       color: #f1f1f1;
-      line-height: 1.9;
-      min-height: 100vh;
-      overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+      line-height: 1.8;
+      overflow-x: hidden;
     }
-    
-    .container { width: 100%; max-width: 850px; margin: 0 auto; padding: 15px; }
-    
-    /* --- Hero --- */
-    .hero { text-align: center; padding: 40px 10px 30px; position: relative; }
-    
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 50%;
-      transform: translateX(-50%);
-      width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(91,192,222,0.15) 0%, transparent 70%);
+
+    /* ---------- Background Animation ---------- */
+    .bg-wrapper {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
       z-index: -1;
-      animation: pulse 4s ease-in-out infinite;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0a0e27 0%, #0e1621 100%);
     }
     
-    @keyframes pulse {
-      0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
-      50% { opacity: 1; transform: translateX(-50%) scale(1.1); }
+    .bg-image {
+      width: 100%; height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=2000&auto=format&fit=crop'); /* عکس بیت کوین */
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+      transform-origin: center center;
+      transition: transform 0.1s linear, opacity 0.1s linear;
+      will-change: transform, opacity;
     }
-    
-    .hero h1 {
-      font-size: 1.8rem;
-      background: linear-gradient(135deg, #5bc0de, #4a90e2, #9b59b6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 12px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-    }
-    
-    .hero .subtitle {
-      font-size: 1rem;
-      color: #a0b3c8;
-      max-width: 600px;
-      margin: 0 auto 25px;
-      padding: 0 10px;
-    }
-    
-    .tagline {
-      display: inline-block;
-      background: rgba(91,192,222,0.15);
-      color: #5bc0de;
-      padding: 6px 16px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      margin-bottom: 20px;
-      border: 1px solid rgba(91,192,222,0.3);
-    }
-    
-    .founder-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: linear-gradient(135deg, rgba(155,89,182,0.2), rgba(91,192,222,0.2));
-      color: #d1b3ff;
-      padding: 6px 16px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      margin-top: 12px;
-      border: 1px solid rgba(155,89,182,0.4);
-      font-weight: bold;
-    }
-    
-    /* --- Buttons (Touch-Friendly) --- */
-    .cta-group {
+
+    /* ---------- Navigation (Hamburger) ---------- */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      padding: 15px 20px;
+      background: rgba(5, 8, 15, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(91,192,222,0.1);
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 25px;
-      padding: 0 10px;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
     }
+    
+    .logo { font-size: 1.2rem; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 1px; }
+    .logo span { color: #5bc0de; }
+
+    .hamburger {
+      display: flex; flex-direction: column; justify-content: space-between;
+      width: 30px; height: 20px; cursor: pointer; z-index: 1001;
+    }
+    .hamburger div {
+      width: 100%; height: 3px; background-color: #5bc0de; border-radius: 2px; transition: all 0.3s ease;
+    }
+    
+    /* Hamburger Active State */
+    .hamburger.active div:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+    .hamburger.active div:nth-child(2) { opacity: 0; }
+    .hamburger.active div:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+
+    .nav-links {
+      position: fixed;
+      top: 0; right: -100%;
+      width: 70%; max-width: 300px; height: 100vh;
+      background: rgba(10, 14, 39, 0.98);
+      backdrop-filter: blur(15px);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      gap: 30px;
+      transition: right 0.4s ease;
+      border-left: 1px solid rgba(91,192,222,0.2);
+      z-index: 999;
+    }
+    .nav-links.active { right: 0; }
+    .nav-links a {
+      color: #d1d9e0; text-decoration: none; font-size: 1.2rem; font-weight: bold; transition: color 0.3s ease;
+    }
+    .nav-links a:hover { color: #5bc0de; }
+
+    /* ---------- Main Container ---------- */
+    .container { max-width: 850px; margin: 0 auto; padding: 80px 15px 20px; position: relative; z-index: 1; }
+    
+    /* ---------- Hero Section ---------- */
+    .hero { text-align: center; padding: 50px 10px 40px; }
+    
+    .avatar-large {
+      width: 110px; height: 110px; border-radius: 50%;
+      background: linear-gradient(135deg, #9b59b6, #5bc0de);
+      margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; font-weight: bold; color: #fff;
+      box-shadow: 0 10px 30px rgba(91,192,222,0.3);
+    }
+    
+    .hero h1 { font-size: 2.2rem; color: #fff; margin-bottom: 10px; font-weight: 800; }
+    .hero h1 span { color: #5bc0de; }
+    .hero .subtitle { font-size: 1.1rem; color: #a0b3c8; margin-bottom: 25px; }
+    
+    /* ---------- Buttons ---------- */
+    .cta-group { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; padding: 0 10px; }
     
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 20px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      min-height: 48px; /* Touch-friendly */
-      width: 100%;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 20px; border-radius: 12px; text-decoration: none;
+      font-weight: bold; font-size: 1rem; transition: all 0.3s ease;
+      border: none; cursor: pointer; width: 100%; min-height: 50px;
     }
     
-    .btn-primary {
-      background: linear-gradient(135deg, #0088cc, #0066aa);
-      color: #fff;
-      box-shadow: 0 5px 20px rgba(0,136,204,0.3);
-    }
-    .btn-primary:active { transform: scale(0.98); }
-    
-    .btn-twitter {
-      background: linear-gradient(135deg, #1DA1F2, #0d8ddb);
-      color: #fff;
-      box-shadow: 0 5px 20px rgba(29,161,242,0.3);
-    }
-    .btn-twitter:active { transform: scale(0.98); }
-    
-    .btn-youtube {
-      background: linear-gradient(135deg, #FF0000, #CC0000);
-      color: #fff;
-      box-shadow: 0 5px 20px rgba(255,0,0,0.3);
-    }
-    .btn-youtube:active { transform: scale(0.98); }
+    .btn-primary { background: linear-gradient(135deg, #0088cc, #0066aa); color: #fff; box-shadow: 0 5px 20px rgba(0,136,204,0.3); }
+    .btn-twitter { background: linear-gradient(135deg, #1DA1F2, #0d8ddb); color: #fff; box-shadow: 0 5px 20px rgba(29,161,242,0.3); }
+    .btn-youtube { background: linear-gradient(135deg, #FF0000, #CC0000); color: #fff; box-shadow: 0 5px 20px rgba(255,0,0,0.3); }
+    .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; box-shadow: 0 5px 20px rgba(220,39,67,0.3); }
+    .btn:active { transform: scale(0.98); }
 
-    .btn-instagram {
-      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-      color: #fff;
-      box-shadow: 0 5px 20px rgba(220,39,67,0.3);
-    }
-    .btn-instagram:active { transform: scale(0.98); }
-    
-    /* --- Sections --- */
-    .section, .prices-section, .features-section, .about-section, .official-section, .warning-section, .faq-section {
-      padding: 25px 15px;
+    /* ---------- Sections ---------- */
+    .section {
+      background: rgba(15, 22, 35, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(91,192,222,0.15);
+      border-radius: 15px;
+      padding: 25px 20px;
       margin: 25px 0;
     }
     
-    .section h2, .prices-section h2, .features-section h2, .about-section h2, .official-section h2, .warning-section h2, .faq-section h2 {
-      text-align: center;
-      color: #5bc0de;
-      margin-bottom: 20px;
-      font-size: 1.3rem;
-    }
-    
-    /* --- Prices --- */
-    .prices-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-    
-    .price-card {
-      background: rgba(23,33,43,0.8);
-      border: 1px solid rgba(91,192,222,0.15);
-      border-radius: 12px;
-      padding: 15px 10px;
-      text-align: center;
-    }
-    
+    .section h2 { color: #5bc0de; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid rgba(91,192,222,0.2); padding-bottom: 10px; }
+    .section p { color: #d1d9e0; margin-bottom: 15px; font-size: 1rem; }
+
+    /* ---------- Price Grid ---------- */
+    .prices-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .price-card { background: rgba(0,0,0,0.3); border: 1px solid rgba(91,192,222,0.15); border-radius: 12px; padding: 15px 10px; text-align: center; }
     .price-card .coin-name { font-size: 0.8rem; color: #8b9bb4; margin-bottom: 5px; }
-    .price-card .coin-price { font-size: 1.1rem; font-weight: bold; color: #fff; margin-bottom: 3px; }
+    .price-card .coin-price { font-size: 1.1rem; font-weight: bold; color: #fff; }
     .price-card .coin-change { font-size: 0.8rem; font-weight: bold; }
-    
-    .up { color: #4ade80; }
-    .down { color: #f87171; }
-    
-    /* --- Features --- */
-    .features-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-    
-    .feature-card {
-      background: rgba(23,33,43,0.6);
-      border: 1px solid rgba(91,192,222,0.1);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    .feature-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
-    .feature-card h3 { color: #5bc0de; margin-bottom: 8px; font-size: 1.1rem; }
-    .feature-card p { color: #a0b3c8; font-size: 0.9rem; }
-    
-    /* --- About / Founder --- */
-    .about-section { background: rgba(23,33,43,0.6); border-radius: 15px; padding: 25px 15px; }
-    .about-section p { color: #d1d9e0; margin-bottom: 12px; font-size: 0.95rem; }
-    
-    .founder-card {
-      margin-top: 20px;
-      padding: 15px;
-      background: linear-gradient(135deg, rgba(155,89,182,0.1), rgba(91,192,222,0.1));
-      border: 1px solid rgba(155,89,182,0.3);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    
-    .founder-avatar {
-      width: 50px; height: 50px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #9b59b6, #5bc0de);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; font-weight: bold; color: #fff; flex-shrink: 0;
-    }
-    
-    .founder-info h4 { color: #d1b3ff; margin-bottom: 3px; font-size: 1rem; }
-    .founder-info p { color: #a0b3c8; font-size: 0.85rem; margin: 0; }
-    
-    /* --- Official Accounts --- */
-    .official-section {
-      background: linear-gradient(135deg, rgba(23,33,43,0.9), rgba(26,31,58,0.9));
-      border: 2px solid rgba(91,192,222,0.3);
-      border-radius: 15px;
-    }
-    
-    .official-list { list-style: none; margin-bottom: 15px; }
-    .official-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(91,192,222,0.1);
-      display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 0.9rem;
-    }
+    .up { color: #4ade80; } .down { color: #f87171; }
+
+    /* ---------- Official Links ---------- */
+    .official-list { list-style: none; }
+    .official-list li { padding: 10px 0; border-bottom: 1px solid rgba(91,192,222,0.1); display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
     .official-list li:last-child { border-bottom: none; }
-    
-    .official-list .badge {
-      background: rgba(74,222,128,0.15); color: #4ade80;
-      padding: 3px 10px; border-radius: 20px;
-      font-size: 0.75rem; font-weight: bold; border: 1px solid rgba(74,222,128,0.3);
-    }
-    
-    .official-list a { color: #5bc0de; text-decoration: none; font-weight: bold; direction: ltr; }
-    
-    /* --- Warning --- */
-    .warning-section {
-      background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(220,38,38,0.05));
-      border: 2px solid rgba(248,113,113,0.4);
-      border-radius: 15px;
-    }
-    .warning-section h2 { color: #f87171; }
-    .warning-section ul { list-style: none; padding: 0; }
-    .warning-section li { padding: 8px 0; color: #fecaca; display: flex; align-items: flex-start; gap: 8px; font-size: 0.9rem; }
-    .warning-section li::before { content: '⚠️'; flex-shrink: 0; }
-    
-    /* --- FAQ --- */
-    .faq-item {
-      background: rgba(23,33,43,0.6);
-      border: 1px solid rgba(91,192,222,0.1);
-      border-radius: 10px;
-      margin-bottom: 10px;
-      overflow: hidden;
-    }
-    .faq-question {
-      padding: 15px; cursor: pointer; font-weight: bold; color: #d1d9e0;
-      display: flex; justify-content: space-between; align-items: center;
-      user-select: none; font-size: 0.95rem;
-    }
-    .faq-question::after { content: '+'; font-size: 1.2rem; color: #5bc0de; transition: transform 0.3s ease; }
-    .faq-item.active .faq-question::after { transform: rotate(45deg); }
-    .faq-answer {
-      max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease;
-      color: #a0b3c8; padding: 0 15px; font-size: 0.9rem;
-    }
-    .faq-item.active .faq-answer { max-height: 250px; padding: 0 15px 15px; }
-    
-    /* --- Footer --- */
-    footer { text-align: center; padding: 30px 15px 20px; color: #6c7a8a; font-size: 0.85rem; margin-top: 30px; }
+    .official-list a { color: #5bc0de; text-decoration: none; font-weight: bold; }
+
+    /* ---------- Footer ---------- */
+    footer { text-align: center; padding: 30px 15px; color: #6c7a8a; font-size: 0.85rem; }
     footer a { color: #5bc0de; text-decoration: none; }
-    
-    .social-links { display: flex; justify-content: center; gap: 12px; margin-bottom: 20px; }
-    .social-links a {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 40px; height: 40px; border-radius: 50%;
-      background: rgba(91,192,222,0.1); color: #5bc0de; text-decoration: none;
-      font-size: 1.1rem; transition: all 0.3s ease;
-    }
-    .social-links a:hover { background: rgba(91,192,222,0.3); transform: translateY(-2px); }
-    
-    /* ---------- Media Queries for Larger Screens ---------- */
+
+    /* ---------- Media Queries (Tablets/Desktops) ---------- */
     @media (min-width: 600px) {
-      .container { padding: 20px; }
-      .hero h1 { font-size: 2.5rem; }
-      .hero .subtitle { font-size: 1.1rem; }
-      
-      .cta-group { flex-direction: row; justify-content: center; gap: 15px; }
+      .container { padding: 100px 20px 40px; }
+      .hero h1 { font-size: 3rem; }
+      .hero .subtitle { font-size: 1.2rem; }
+      .cta-group { flex-direction: row; justify-content: center; flex-wrap: wrap; }
       .btn { width: auto; padding: 14px 30px; }
-      
       .prices-grid { grid-template-columns: repeat(4, 1fr); }
-      .price-card .coin-name { font-size: 0.95rem; }
-      .price-card .coin-price { font-size: 1.4rem; }
-      
-      .features-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-      .features-section h2, .about-section h2, .official-section h2, .warning-section h2, .faq-section h2 { font-size: 1.5rem; }
-      
-      .faq-question { padding: 18px 22px; }
-      .faq-answer { padding: 0 22px; }
-      .faq-item.active .faq-answer { padding: 0 22px 18px; }
-      
-      footer { padding: 40px 20px 20px; }
-      .social-links a { width: 45px; height: 45px; font-size: 1.3rem; }
+      .section { padding: 35px; }
     }
-    
-    /* --- Animations --- */
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
 
-<div class="container">
+  <!-- Background Animation -->
+  <div class="bg-wrapper">
+    <div class="bg-image" id="bgImage"></div>
+  </div>
 
-  <!-- هیرو -->
-  <section class="hero">
-    <span class="tagline">🌐 Persian & English Community</span>
-    <h1>ViaChart | ویاچارت</h1>
-    <p class="subtitle">
-      مرجع تخصصی اخبار لحظه‌ای، تحلیل تکنیکال و فاندامنتال، و سیگنال‌های حرفه‌ای کریپتو با تمرکز بر مدیریت ریسک.
-    </p>
-    <div class="founder-badge">
-      👑 Founder: aliafshartm
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="logo">ALI <span>AFSHAR</span></a>
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    <div class="cta-group">
-      <a href="https://t.me/viachart_app" class="btn btn-primary">
-        🚀 عضویت در کانال تلگرام
-      </a>
-      <a href="https://x.com/viachat_app" class="btn btn-twitter">
-        🐦 دنبال کردن در توییتر
-      </a>
-      <a href="https://youtube.com/@aliafshartm" class="btn btn-youtube">
-        ▶️ سابسکرایب در یوتیوب
-      </a>
-      <a href="https://www.instagram.com/aliafshar_tm" class="btn btn-instagram">
-        📸 دنبال کردن در اینستاگرام
-      </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="https://t.me/viachart_app" target="_blank">ViaChart</a>
+      <a href="about-ali.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
     </div>
-  </section>
+  </nav>
 
-  <!-- لینک به بلاگ -->
-  <section class="features-section fade-in" style="text-align: center; margin-top: 20px;">
-    <div style="display: flex; flex-direction: column; gap: 10px;">
-        <a href="blog.html" class="btn btn-primary" style="background: rgba(91,192,222,0.1); border: 1px solid rgba(91,192,222,0.3); color: #5bc0de;">
-          📚 مطالعه مقالات آموزشی
-        </a>
-        <a href="results.html" class="btn btn-primary" style="background: rgba(91,192,222,0.1); border: 1px solid rgba(91,192,222,0.3); color: #5bc0de;">
-          📊 مشاهده رکورد سیگنال‌ها
-        </a>
-    </div>
-  </section>
-
-  <!-- قیمت‌های لحظه‌ای -->
-  <section class="prices-section fade-in">
-    <h2>📊 قیمت لحظه‌ای بازار</h2>
-    <div class="prices-grid" id="prices-grid">
-      <div class="price-card"><div class="coin-name">Bitcoin (BTC)</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
-      <div class="price-card"><div class="coin-name">Ethereum (ETH)</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
-      <div class="price-card"><div class="coin-name">BNB</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
-      <div class="price-card"><div class="coin-name">Solana (SOL)</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
-    </div>
-  </section>
-
-  <!-- ویژگی‌ها -->
-  <section class="features-section fade-in">
-    <h2>✨ چرا ViaChart؟</h2>
-    <div class="features-grid">
-      <div class="feature-card"><span class="feature-icon">📰</span><h3>اخبار لحظه‌ای</h3><p>پوشش سریع و دقیق مهم‌ترین اخبار بازار کریپتو با تحلیل تأثیرش بر روند بازار.</p></div>
-      <div class="feature-card"><span class="feature-icon">📈</span><h3>تحلیل تخصصی</h3><p>تحلیل تکنیکال و فاندامنتال توسط تیم حرفه‌ای، با سناریوهای صعودی و نزولی.</p></div>
-      <div class="feature-card"><span class="feature-icon">🎯</span><h3>سیگنال‌های شفاف</h3><p>سیگنال‌های فیوچرز و اسپات با حد ضرر و مدیریت سرمایه، بدون وعده سود تضمینی.</p></div>
-      <div class="feature-card"><span class="feature-icon">🛡️</span><h3>مدیریت ریسک</h3><p>آموزش و تمرکز بر حفظ سرمایه، با قانون ۱٪ و مدیریت ریسک حرفه‌ای.</p></div>
-    </div>
-  </section>
-
-  <!-- درباره ما -->
-  <section class="about-section fade-in">
-    <h2>📖 درباره ViaChart</h2>
-    <p>ViaChart یک کانال تخصصی برای تریدرهای فارسی‌زبان و انگلیسی‌زبان در بازار ارزهای دیجیتال است. ما با تمرکز بر اخبار لحظه‌ای، تحلیل تکنیکال و فاندامنتال، و ارائه سیگنال‌های حرفه‌ای فیوچرز و اسپات، به کاربران کمک می‌کنیم تا با مدیریت سرمایه و کنترل ریسک، تصمیم‌های هوشمندانه‌تری بگیرند.</p>
-    <p>هدف ما ایجاد یک جامعه شفاف و قابل اعتماد است که در آن رکورد سیگنال‌ها به‌صورت کامل نمایش داده می‌شود و هیچ وعده سود تضمینی داده نمی‌شود.</p>
+  <div class="container">
     
-    <div class="founder-card">
-      <div class="founder-avatar">A</div>
-      <div class="founder-info">
-        <h4><a href="about-ali.html" style="color: #d1b3ff; text-decoration: none;">👑 Ali Afshar (aliafshartm)</a></h4>
-        <p>بنیان‌گذار و مالک ViaChart</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="avatar-large">A</div>
+      <h1>Ali Afshar <span>(aliafshartm)</span></h1>
+      <p class="subtitle">Software Developer | Game Creator | Founder of ViaChart</p>
+      
+      <div class="cta-group">
+        <a href="https://t.me/viachart_app" class="btn btn-primary">🚀 Join ViaChart</a>
+        <a href="https://youtube.com/@aliafshartm" class="btn btn-youtube">▶️ YouTube</a>
+        <a href="https://www.instagram.com/aliafshartm" class="btn btn-instagram">📸 Instagram</a>
+        <a href="https://x.com/viachat_app" class="btn btn-twitter">🐦 Twitter</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- حساب‌های رسمی -->
-  <section class="official-section fade-in">
-    <h2>✅ حساب‌های رسمی ViaChart</h2>
-    <ul class="official-list">
-      <li><span>📢 کانال تلگرام:</span> <a href="https://t.me/viachart_app" target="_blank">@viachart_app</a> <span class="badge">رسمی</span></li>
-      <li><span>🐦 توییتر (X):</span> <a href="https://x.com/viachat_app" target="_blank">@viachat_app</a> <span class="badge">رسمی</span></li>
-      <li><span>🎬 یوتیوب:</span> <a href="https://youtube.com/@aliafshartm" target="_blank">@aliafshartm</a> <span class="badge">رسمی</span></li>
-      <li><span>📸 اینستاگرام:</span> <a href="https://www.instagram.com/aliafshar_tm" target="_blank">@aliafshar_tm</a> <span class="badge">رسمی</span></li>
-      <li><span>🌐 وب‌سایت:</span> <a href="https://aliafshartm-star.github.io/viachart/" target="_blank">aliafshartm-star.github.io/viachart</a> <span class="badge">رسمی</span></li>
-    </ul>
-    <p style="color: #a0b3c8; font-size: 0.85rem; margin-top: 15px;">🔹 فقط از طریق لینک‌های بالا با ما در ارتباط باشید. هر حساب دیگری به نام ViaChart جعلی است.</p>
-  </section>
+    <!-- About Me Section -->
+    <section class="section" id="about">
+      <h2>👨‍💻 About Me</h2>
+      <p>I am a passionate Software Developer and Game Creator who loves building innovative solutions. I bridge the gap between traditional software, immersive gaming experiences, and Web3 technology.</p>
+      <p>As the founder of <strong>ViaChart</strong>, I've combined my deep understanding of crypto markets with my technical expertise to create a transparent, risk-focused platform for traders worldwide.</p>
+    </section>
 
-  <!-- هشدار امنیتی -->
-  <section class="warning-section fade-in">
-    <h2>⚠️ هشدار امنیتی مهم</h2>
-    <ul>
-      <li>ما هیچ‌وقت از شما پول، اطلاعات کیف پول یا رمز عبور نمی‌خواهیم.</li>
-      <li>هیچ ادمین ViaChart به شما پیام مستقیم (DM) نمی‌دهد.</li>
-      <li>ما هیچ‌وقت از شما نمی‌خواهیم برای عضویت در کانال VIP یا گروه خصوصی پول واریز کنید.</li>
-      <li>اگر کسی با نام ViaChart به شما پیام داد، فوراً بلاکش کنید.</li>
-      <li>هرگونه حساب یا کانال جعلی را می‌توانید از طریق کانال رسمی به ما گزارش دهید.</li>
-      <li>فقط به لینک‌های موجود در این صفحه یا پست‌های رسمی کانال اعتماد کنید.</li>
-    </ul>
-  </section>
+    <!-- ViaChart Prices Section -->
+    <section class="section">
+      <h2>📊 Live Crypto Market (ViaChart)</h2>
+      <div class="prices-grid" id="prices-grid">
+        <div class="price-card"><div class="coin-name">Bitcoin (BTC)</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
+        <div class="price-card"><div class="coin-name">Ethereum (ETH)</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
+        <div class="price-card"><div class="coin-name">BNB</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
+        <div class="price-card"><div class="coin-name">Solana (SOL)</div><div class="coin-price">Loading...</div><div class="coin-change">---</div></div>
+      </div>
+    </section>
 
-  <!-- سوالات متداول -->
-  <section class="faq-section fade-in">
-    <h2>❓ سوالات متداول</h2>
-    <div class="faq-item"><div class="faq-question">آیا سیگنال‌های ViaChart تضمینی هستند؟</div><div class="faq-answer">خیر. ما هیچ‌وقت سود تضمینی نمی‌دیم. تمام سیگنال‌ها با مدیریت ریسک ارائه می‌شن و مسئولیت تصمیم نهایی با خودتونه.</div></div>
-    <div class="faq-item"><div class="faq-question">عضویت در کانال هزینه‌ای داره؟</div><div class="faq-answer">خیر، عضویت در کانال اصلی ViaChart کاملاً رایگانه.</div></div>
-    <div class="faq-item"><div class="faq-question">محتوای کانال به چه زبانیه؟</div><div class="faq-answer">محتوای ما دوزبانه است. بخش عمده‌ای به فارسی ارائه می‌شه، و تحلیل‌های کلیدی به انگلیسی هم ترجمه می‌شن.</div></div>
-    <div class="faq-item"><div class="faq-question">چطور می‌تونم عضو بشم؟</div><div class="faq-answer">کافیه روی دکمه «عضویت در کانال تلگرام» بالای همین صفحه بزنی.</div></div>
-    <div class="faq-item"><div class="faq-question">آیا آموزش هم دارید؟</div><div class="faq-answer">بله. ما به صورت دوره‌ای محتوای آموزشی درباره مدیریت سرمایه، تحلیل تکنیکال و روانشناسی ترید منتشر می‌کنیم.</div></div>
-    <div class="faq-item"><div class="faq-question">چطور مطمئن بشم حساب رسمی رو پیدا کردم؟</div><div class="faq-answer">فقط از لینک‌های موجود در بخش «حساب‌های رسمی ViaChart» در همین صفحه استفاده کنید. ما هیچ‌وقت از طریق پیام مستقیم با شما ارتباط نمی‌گیریم.</div></div>
-    <div class="faq-item"><div class="faq-question">بنیان‌گذار ViaChart کیه؟</div><div class="faq-answer">ViaChart توسط علی افشار (Ali Afshar / aliafshartm) بنیان‌گذاری شده و مدیریت می‌شه.</div></div>
-  </section>
+    <!-- Official Links -->
+    <section class="section">
+      <h2>✅ Official Links</h2>
+      <ul class="official-list">
+        <li>📢 <strong>Telegram:</strong> <a href="https://t.me/viachart_app" target="_blank">@viachart_app</a></li>
+        <li>🐦 <strong>Twitter:</strong> <a href="https://x.com/viachat_app" target="_blank">@viachat_app</a></li>
+        <li>🎬 <strong>YouTube:</strong> <a href="https://youtube.com/@aliafshartm" target="_blank">@aliafshartm</a></li>
+        <li>📸 <strong>Instagram:</strong> <a href="https://www.instagram.com/aliafshartm" target="_blank">@aliafshartm</a></li>
+      </ul>
+      <p style="margin-top: 15px; font-size: 0.85rem; color: #8b9bb4;">🔹 Only trust the links above. Any other account is fake.</p>
+    </section>
 
-  <!-- فوتر -->
-  <footer>
-    <div class="social-links">
-      <a href="https://t.me/viachart_app" title="Telegram">✈️</a>
-      <a href="https://x.com/viachat_app" title="Twitter/X">🐦</a>
-      <a href="https://youtube.com/@aliafshartm" title="YouTube">▶️</a>
-      <a href="https://www.instagram.com/aliafshar_tm" title="Instagram">📸</a>
-      <a href="https://aliafshartm-star.github.io/viachart/" title="Website">🌐</a>
-    </div>
-    <p>© 2025 ViaChart | <a href="about-ali.html" style="color: #5bc0de; font-weight: bold;">Founder: aliafshartm</a></p>
-    <p style="margin-top: 5px;">تمامی حقوق محفوظ است.</p>
-    <p style="margin-top: 10px; font-size: 0.8rem;">⚠️ محتوای این سایت و کانال، توصیه مالی نیست. مسئولیت تصمیم‌های معاملاتی با خودتونه.</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Ali Afshar (aliafshartm). All rights reserved.</p>
+      <p style="margin-top: 5px;">Founder of <a href="https://t.me/viachart_app">ViaChart</a> | <a href="about-ali.html">Full Portfolio</a></p>
+    </footer>
 
-</div>
+  </div>
 
-<script>
-  // --- API & Fetching Prices ---
-  const coins = [
-    { id: '90', name: 'Bitcoin (BTC)' },
-    { id: '80', name: 'Ethereum (ETH)' },
-    { id: '2710', name: 'BNB' },
-    { id: '48543', name: 'Solana (SOL)' }
-  ];
-  
-  async function fetchPrices() {
-    try {
-      const res = await fetch('https://api.coinlore.net/api/tickers/');
-      const json = await res.json();
-      const data = json.data;
-      if (!data || !Array.isArray(data)) return;
-      
-      const grid = document.getElementById('prices-grid');
-      grid.innerHTML = '';
-      
-      coins.forEach(coin => {
-        const info = data.find(c => c.id === coin.id);
-        if (!info) {
-          grid.innerHTML += `<div class="price-card"><div class="coin-name">${coin.name}</div><div class="coin-price">N/A</div><div class="coin-change">---</div></div>`;
-          return;
-        }
-        const price = parseFloat(info.price_usd).toLocaleString('en-US', { maximumFractionDigits: 2 });
-        const change = parseFloat(info.percent_change_24h).toFixed(2);
-        const changeClass = change >= 0 ? 'up' : 'down';
-        const arrow = change >= 0 ? '▲' : '▼';
-        grid.innerHTML += `
-          <div class="price-card">
-            <div class="coin-name">${coin.name}</div>
-            <div class="coin-price">$${price}</div>
-            <div class="coin-change ${changeClass}">${arrow} ${Math.abs(change)}%</div>
-          </div>
-        `;
+  <script>
+    // --- Hamburger Menu Logic ---
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
       });
-    } catch (e) {
-      console.error('CoinLore failed, trying CoinCap...', e);
+    });
+
+    // --- Scroll Animation for Background (Bitcoin Zoom) ---
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const bgImage = document.getElementById('bgImage');
+      
+      // Scale from 1 to 2.5 based on scroll
+      const scaleValue = 1 + (scrolled / 1200); 
+      
+      // Slowly fade out as user scrolls
+      const opacityValue = Math.max(0.05, 0.2 - (scrolled / 3000));
+
+      bgImage.style.transform = `scale(${scaleValue})`;
+      bgImage.style.opacity = opacityValue;
+    });
+
+    // --- Live Prices Logic ---
+    const coins = [
+      { id: '90', name: 'Bitcoin (BTC)' },
+      { id: '80', name: 'Ethereum (ETH)' },
+      { id: '2710', name: 'BNB' },
+      { id: '48543', name: 'Solana (SOL)' }
+    ];
+    
+    async function fetchPrices() {
       try {
-        const res2 = await fetch('https://api.coincap.io/v2/assets?ids=bitcoin,ethereum,binance-coin,solana');
-        const json2 = await res2.json();
-        const data2 = json2.data;
+        const res = await fetch('https://api.coinlore.net/api/tickers/');
+        const json = await res.json();
+        const data = json.data;
+        if (!data || !Array.isArray(data)) return;
+        
         const grid = document.getElementById('prices-grid');
         grid.innerHTML = '';
-        const map = { 'bitcoin': 'Bitcoin (BTC)', 'ethereum': 'Ethereum (ETH)', 'binance-coin': 'BNB', 'solana': 'Solana (SOL)' };
-        data2.forEach(asset => {
-          const price = parseFloat(asset.priceUsd).toLocaleString('en-US', { maximumFractionDigits: 2 });
-          const change = parseFloat(asset.changePercent24Hr).toFixed(2);
+        
+        coins.forEach(coin => {
+          const info = data.find(c => c.id === coin.id);
+          if (!info) return;
+          const price = parseFloat(info.price_usd).toLocaleString('en-US', { maximumFractionDigits: 2 });
+          const change = parseFloat(info.percent_change_24h).toFixed(2);
           const changeClass = change >= 0 ? 'up' : 'down';
           const arrow = change >= 0 ? '▲' : '▼';
+          
           grid.innerHTML += `
             <div class="price-card">
-              <div class="coin-name">${map[asset.id] || asset.name}</div>
+              <div class="coin-name">${coin.name}</div>
               <div class="coin-price">$${price}</div>
               <div class="coin-change ${changeClass}">${arrow} ${Math.abs(change)}%</div>
             </div>
           `;
         });
-      } catch (e2) { console.error('Fallback also failed:', e2); }
+      } catch (e) {
+        console.error("API Error", e);
+      }
     }
-  }
-  fetchPrices();
-  setInterval(fetchPrices, 60000);
-  
-  // --- FAQ Accordion ---
-  document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => { q.parentElement.classList.toggle('active'); });
-  });
-  
-  // --- Scroll Animation ---
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
+    fetchPrices();
+    setInterval(fetchPrices, 60000);
+  </script>
 
 </body>
 </html>
