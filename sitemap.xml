@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- صفحه اصلی (Ali Afshar) -->
   <url>
     <loc>https://aliafshartm-star.github.io/viachart/</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- صفحه مخفی سئو (بهترین کانال سیگنال) -->
+  <url>
+    <loc>https://aliafshartm-star.github.io/viachart/best-crypto-signals.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- صفحه رزومه و پورتفولیو -->
+  <url>
+    <loc>https://aliafshartm-star.github.io/viachart/about-ali.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- بلاگ و مقالات -->
   <url>
     <loc>https://aliafshartm-star.github.io/viachart/blog.html</loc>
     <lastmod>2025-01-15</lastmod>
@@ -40,6 +59,14 @@
     <loc>https://aliafshartm-star.github.io/viachart/post-4.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- صفحه چارت‌های زنده -->
+  <url>
+    <loc>https://aliafshartm-star.github.io/viachart/coin.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
